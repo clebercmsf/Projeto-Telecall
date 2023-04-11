@@ -19,5 +19,5 @@ O site deve prover uma barra com 2 mecanismos de acessibilidade.
 - Aumento e Diminuição do tamanho das fontes;
 
 ### Demais Requisitos do Sistema
-- O sistema deve ser responsivo e devem ser utilizados Frameworks de Front-End como Materialize, Bootstrap, Foundation, Pure ou outro.  
+- O sistema deve ser responsivo e devem ser utilizados Frameworks de CSS como Materialize, Bootstrap, Foundation, Pure ou outro.  
 - O sistema deve utilizar a identidade visual da Telecall.
