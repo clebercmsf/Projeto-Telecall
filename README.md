@@ -15,7 +15,7 @@ O site deve ter as seguintes funcionalidades principais:
 
 ### Desafio Plus
 O site deve prover uma barra com 2 mecanismos de acessibilidade.
-- Troca de Contraste (Fundo Escuro / Fonte Clara) e (Fonte Clara / Fundo Escuro);
+- Troca de Contraste (Fundo Escuro / Fonte Clara) e (Fundo Claro / Fonde Escura);
 - Aumento e Diminuição do tamanho das fontes;
 
 ### Demais Requisitos do Sistema
