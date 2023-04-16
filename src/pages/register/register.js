@@ -82,7 +82,7 @@ cellInput.addEventListener("keypress", () => {
     cellInput.value += "-";
   }
 }); 
-// (+55)XX-7XXXXX-XXX
+//
 
 // tellNumber input format;
 const tellInput = document.querySelector("#t-number");
@@ -97,4 +97,4 @@ tellInput.addEventListener("keypress", () => {
   } else if (tellLength === 12) {
     tellInput.value += "-";
   }
-}); 
+});
