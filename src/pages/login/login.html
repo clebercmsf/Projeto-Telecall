@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="login1.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div class="main-login">
-        <div class="left-login">
-            <h1>Área do Cliente<br>Faça seu login para obter mais informações</h1>
-            <img src="/src/assets/img/telecall-logo4.png" alt="telecall">
-        </div>
-        <div class="right-login">
-            <div class="card-login">
-                <h1>LOGIN</h1>
-                <div class="textfield">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" placeholder="Usuário">
-                </div>
-                <div class="textfield">
-                    <label for="senha">Senha</label>
-                    <input type="password" placeholder="Senha">
-                </div>
-                <button class="btn-login">Login</button>
+    <div class="header">
+        <img src="../../assets/img/telecall-logo4.png" alt="telecall-logo">
+    </div>
+    <div class="login">
+        <div class="card-login">
+            <h1>LOGIN</h1>
+            <div class="textfield">
+                <label for="user">Usuário</label>
+                <input type="text" placeholder="Usuário">
             </div>
+            <div class="textfield">
+                <label for="password">Senha</label>
+                <input type="password" placeholder="Senha">
+            </div>
+            <div class="register">
+                <label>Ainda não possui uma conta? <a href="/src/pages/register/register.html">Crie aqui.</a></label>
+            </div>
+            <button class="btn-login">Entrar</button>
         </div>
     </div>
 </body>

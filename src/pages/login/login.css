@@ -1,46 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import "/src/style.css";
 
 body {
-    margin: 0;
     font-family: 'Noto Sans', sans-serif;
+    background-image: url("/src/assets/img/telecall-background-login.jpg");
+    background-size: cover;
 }
 
-.main-login {
-    width: 100vw;
-    height: 100vh;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header img {
+    width: 150px;
+    height: 150px;
 }
 
-.left-login {
-    width: 50vw;
-    height: 100vh;
+.login {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-}
-
-.left-login > h1 {
-    color: #31353B;
-}
-
-.left-login > p {
-    color: #31353B;
-}
-
-.right-login {
-    width: 50vw;
-    height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
+    color: #f0ffffde;
+}
+
+.login a {
+    text-decoration: none;
+    font-weight: 800;
+    color: #082F4A;
 }
 
 .card-login {
-    width: 60%;
+    width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,12 +37,13 @@ body {
     padding: 30px 35px;
     background: #CA1C2A;
     border-radius: 20px;
-    box-shadow: 0px 10px 40px #00000056;
+    box-shadow: 0px 10px 40px #082F4A;
 }
 
 .card-login > h1 {
     color: #f0ffffde;
     font-weight: 800;
+    font-size: 40px;
     margin: 0;
 }
 
@@ -72,34 +62,40 @@ body {
     border-radius: 10px;
     padding: 15px;
     background: #0E4E7C;
-    color: #f0ffffde;
+    color: #5398C9;
     font-size: 12pt;
-    box-shadow: 0px 10px 40px #00000056;
+    box-shadow: 0px 10px 40px -12px #082F4A;
     outline: none;
     box-sizing: border-box;
-}
-
-.textfield > label {
-    color: #f0ffffde;
-    margin-bottom: 10px;
 }
 
 .textfield > input::placeholder {
     color: #f0ffff94;
 }
 
+.textfield > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
 .btn-login {
-    width: 100%;
+    width: 50%;
     padding: 16px 0px;
     margin: 25px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     outline: none;
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 4px;
-    color: #f0ffffde;
+    color: #5398C9;
     background: #0E4E7C;
     cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #0E4E7C;
+    box-shadow: 0px 10px 40px -12px #082F4A;
+}
+
+.btn-login:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
