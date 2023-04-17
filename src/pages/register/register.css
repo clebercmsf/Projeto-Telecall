@@ -8,9 +8,20 @@ body {
     margin-bottom: 25px;
 }
 
-.header img {
+.header {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.header > img {
     width: 150px;
     height: 150px;
+    cursor: pointer;
+}
+
+.header > img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
 
 .register {
