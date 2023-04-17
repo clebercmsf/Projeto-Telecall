@@ -14,23 +14,27 @@
         </a>
     </div>
     <div class="login">
-        <form>
+        <!-- <form> -->
             <div class="card-login">
+                <form id="form">
                 <h1>LOGIN</h1>
                 <div class="textfield">
                     <label for="user">Usuário</label>
-                    <input type="text" placeholder="Usuário">
+                    <input type="text" placeholder="Usuário" id="username">
                 </div>
                 <div class="textfield">
                     <label for="password">Senha</label>
-                    <input type="password" placeholder="Senha">
+                    <input type="password" placeholder="Senha" id="password">
                 </div>
                 <div class="register">
                     <label><br>Ainda não possui uma conta? <a href="/src/pages/register/register.html">Crie aqui.</a></label>
                 </div>
-                <button type="submit" class="btn-login">Enviar</button>
+                <button type="submit" class="btn-login" onclick="login()">Enviar</button>
+            </form>
             </div>
-        </form>
+        <!-- </form>
+        </form> -->
     </div>
 </body>
+<script src="login.js"></script>
 </html>

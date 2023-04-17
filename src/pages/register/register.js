@@ -55,6 +55,54 @@ function passwordConfirm() {
   }
 }
 
+// function saveData() {
+//   var username = document.getElementById("username").value;
+//   var password = document.getElementById("password").value;
+
+//   var dadosSalvos = JSON.parse(localStorage.getItem("dados"));
+
+//   var dadosUsuario = [];
+
+//   // Se já houver dados salvos, adiciona-os ao array
+//   if (dadosSalvos) {
+//     dadosUsuario = dadosSalvos;
+//   }
+
+//   // Adiciona os novos dados do usuário ao array
+//   dadosUsuario.push({ usuario: usuario, senha: senha });
+
+//   // Salva o array atualizado no localStorage
+//   localStorage.setItem("dados", JSON.stringify(dadosUsuario));
+// }
+
+function saveData() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  var data = JSON.parse(localStorage.getItem("savedData"));
+
+  if(data == null) {
+    localStorage.setItem("dataSaved", "[]");
+    data = [];
+  }
+
+  var register = {
+    user: username.value,
+    pass: password.value
+  }
+
+  data.push(register);
+
+  localStorage.setItem("dataSaved", JSON.stringify(data));
+  alert("Cadastro efetuado com sucesso!");
+
+  username.value = "";
+  password.value = "";
+
+  window.location.href = "/src/pages/login/login.html";
+
+}
+
 // CPF input format;
 const cpfInput = document.querySelector("#cpf");
 
