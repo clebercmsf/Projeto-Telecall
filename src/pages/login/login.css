@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
-@import "/src/style.css";
+@import "../../style.css";
 
 body {
     font-family: 'Noto Sans', sans-serif;
@@ -8,8 +8,8 @@ body {
 }
 
 .header {
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .header > img {
@@ -110,4 +110,36 @@ body {
 .btn-login:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 375px) and (max-width: 667px) {
+    .header > img {
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+    }
+
+    .card-login {
+        width: 250px;
+        margin-top: 150px;
+    }
+}
+
+@media screen and (min-width: 414px) and (max-width: 896px) {
+    body {
+        background-size: 100%;
+    }
+
+    .header > img {
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+    }
+
+    .card-login {
+        width: 250px;
+        margin-top: 150px;
+    }
 }
