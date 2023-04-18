@@ -24,7 +24,7 @@ function removeError(index) {
 }
 
 function nameValidator() {
-  if(field[0].value.length < 15 || field[0].value.length > 60) {
+  if (field[0].value.length < 15 || field[0].value.length > 60) {
     setError(0);
   } else {
     removeError(0);
@@ -32,7 +32,7 @@ function nameValidator() {
 }
 
 function userValidator() {
-  if(!userRejex.test(field[1].value)) {
+  if (!userRejex.test(field[1].value)) {
     setError(1);
   } else {
     removeError(1);
@@ -40,7 +40,7 @@ function userValidator() {
 }
 
 function passwordValidator() {
-  if(!passwordRejex.test(field[2].value)) {
+  if (!passwordRejex.test(field[2].value)) {
     setError(2);
   } else {
     removeError(2);
@@ -48,60 +48,49 @@ function passwordValidator() {
 }
 
 function passwordConfirm() {
-  if(field[2].value != field[3].value) {
+  if (field[2].value != field[3].value || field[3].value == "") {
     setError(3);
   } else {
     removeError(3);
   }
 }
 
-// function saveData() {
-//   var username = document.getElementById("username").value;
-//   var password = document.getElementById("password").value;
-
-//   var dadosSalvos = JSON.parse(localStorage.getItem("dados"));
-
-//   var dadosUsuario = [];
-
-//   // Se já houver dados salvos, adiciona-os ao array
-//   if (dadosSalvos) {
-//     dadosUsuario = dadosSalvos;
-//   }
-
-//   // Adiciona os novos dados do usuário ao array
-//   dadosUsuario.push({ usuario: usuario, senha: senha });
-
-//   // Salva o array atualizado no localStorage
-//   localStorage.setItem("dados", JSON.stringify(dadosUsuario));
-// }
-
+// localStorage
 function saveData() {
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
+  if (nameValidator() == true && userValidator() == true && userValidator() == true && passwordValidator() == true && passwordConfirm() == true) {
+//     nameValidator();
+//   userValidator();
+//   passwordValidator();
+//   passwordConfirm();
+// });
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
 
-  var data = JSON.parse(localStorage.getItem("savedData"));
+    var data = JSON.parse(localStorage.getItem("savedData"));
 
-  if(data == null) {
-    localStorage.setItem("dataSaved", "[]");
-    data = [];
+    if (data == null) {
+      localStorage.setItem("dataSaved", "[]");
+      data = [];
+    }
+
+    var register = {
+      user: username.value,
+      pass: password.value
+    }
+
+    data.push(register);
+
+    localStorage.setItem("dataSaved", JSON.stringify(data));
+    alert("Cadastro efetuado com sucesso!");
+
+    username.value = "";
+    password.value = "";
+
+    // window.location.href = "../login/login.html";
   }
-
-  var register = {
-    user: username.value,
-    pass: password.value
-  }
-
-  data.push(register);
-
-  localStorage.setItem("dataSaved", JSON.stringify(data));
-  alert("Cadastro efetuado com sucesso!");
-
-  username.value = "";
-  password.value = "";
-
-  window.location.href = "/src/pages/login/login.html";
-
+  
 }
+
 
 // CPF input format;
 const cpfInput = document.querySelector("#cpf");
@@ -129,7 +118,7 @@ cellInput.addEventListener("keypress", () => {
   } else if (cellLength === 13) {
     cellInput.value += "-";
   }
-}); 
+});
 //
 
 // tellNumber input format;
