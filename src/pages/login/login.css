@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Noto Sans', sans-serif;
-    background-image: url("/src/assets/img/telecall-background-login.jpg");
+    background-image: url("../../assets/img/telecall-background-login.jpg");
     background-size: cover;
 }
 
