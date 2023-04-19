@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
-@import "/src/style.css";
+@import "../../style.css";
 
 body {
     font-family: 'Noto Sans', sans-serif;
@@ -9,8 +9,8 @@ body {
 }
 
 .header {
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .header > img {
@@ -139,6 +139,10 @@ body {
     color: #082F4A;
 }
 
+.login a:hover {
+    text-decoration: underline #082F4A;
+}
+
 .btn-register {
     align-self: center;
     width: 50%;
@@ -150,10 +154,10 @@ body {
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 4px;
-    color: #95B9D2;
-    background: #0E4E7C;
+    color: #082F4A;
+    background: #E0E0E0;
     cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #082F4A;
+    box-shadow: 0px 10px 40px -12px #31353B;
 }
 
 .btn-register:hover {
@@ -167,4 +171,35 @@ body {
     margin: 3px 0 0 1px;
     color: #5398C9;
     visibility: hidden;
+}
+
+@media screen and (max-width: 450px){
+    .header > img {
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+    }
+
+    .card-register {
+        width: 250px;
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 950px){
+    body {
+        background-size: 100vw 100vh;
+    }
+    
+    .header > img {
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+    }
+
+    .card-register {
+        margin-top: 150px;
+    }
 }
