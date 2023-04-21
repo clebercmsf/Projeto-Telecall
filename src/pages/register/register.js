@@ -11,6 +11,16 @@ form.addEventListener("submit", (event) => {
   userValidator();
   passwordValidator();
   passwordConfirm();
+
+  const user = document.querySelector("#username").value;
+  const password = document.querySelector("#password").value;
+
+  // Armazenando os dados no localStorage
+  localStorage.setItem("user", user);
+  localStorage.setItem("password", password);
+
+  // Redirecionando o usuário para uma página de sucesso (opcional)
+  window.location.href = "../login/login.html";
 });
 
 function setError(index) {
@@ -54,43 +64,6 @@ function passwordConfirm() {
     removeError(3);
   }
 }
-
-// localStorage
-function saveData() {
-  if (nameValidator() == true && userValidator() == true && userValidator() == true && passwordValidator() == true && passwordConfirm() == true) {
-//     nameValidator();
-//   userValidator();
-//   passwordValidator();
-//   passwordConfirm();
-// });
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-
-    var data = JSON.parse(localStorage.getItem("savedData"));
-
-    if (data == null) {
-      localStorage.setItem("dataSaved", "[]");
-      data = [];
-    }
-
-    var register = {
-      user: username.value,
-      pass: password.value
-    }
-
-    data.push(register);
-
-    localStorage.setItem("dataSaved", JSON.stringify(data));
-    alert("Cadastro efetuado com sucesso!");
-
-    username.value = "";
-    password.value = "";
-
-    // window.location.href = "../login/login.html";
-  }
-  
-}
-
 
 // CPF input format;
 const cpfInput = document.querySelector("#cpf");

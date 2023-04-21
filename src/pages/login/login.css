@@ -1,148 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 @import "../../style.css";
 
 body {
-    font-family: 'Noto Sans', sans-serif;
-    background-image: url("../../assets/img/telecall-background-login.jpg");
-    background-size: cover;
+  font-family: "Noto Sans", sans-serif;
+  background-image: url("../../assets/img/telecall-background-login.jpg");
+  background-size: cover;
 }
 
 .header {
-    margin-top: 20px;
-    margin-left: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .header > img {
-    width: 150px;
-    height: 150px;
-    cursor: pointer;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
 }
 
 .header > img:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
 }
 
 .login {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    color: #f0ffffde;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  color: #f0ffffde;
 }
 
 .login a {
-    text-decoration: none;
-    font-weight: 800;
-    color: #082F4A;
+  text-decoration: none;
+  font-weight: 800;
+  color: #082f4a;
 }
 
 .login a:hover {
-    text-decoration: underline #082F4A;
+  text-decoration: underline #082f4a;
 }
 
 .card-login {
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 35px;
-    background: #CA1C2A;
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px #082F4A;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 35px;
+  background: #ca1c2a;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px #082f4a;
 }
 
 .card-login > h1 {
-    align-self: center;
-    color: #f0ffffde;
-    font-weight: 800;
-    font-size: 40px;
-    margin: 0;
+  align-self: center;
+  color: #f0ffffde;
+  font-weight: 800;
+  font-size: 40px;
+  margin: 0;
 }
 
 .textfield {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    margin: 10px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px 0px;
 }
 
 .textfield > input {
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    padding: 15px;
-    background: #0E4E7C;
-    color: #5398C9;
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px -12px #082F4A;
-    outline: none;
-    box-sizing: border-box;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background: #0e4e7c;
+  color: #5398c9;
+  font-size: 12pt;
+  box-shadow: 0px 10px 40px -12px #082f4a;
+  outline: none;
+  box-sizing: border-box;
 }
 
 .textfield > input::placeholder {
-    color: #f0ffff94;
+  color: #f0ffff94;
+}
+
+.textfield > input:focus {
+  border: 2px solid #e0e0e0;
 }
 
 .textfield > label {
-    color: #f0ffffde;
-    margin-bottom: 10px;
-    text-decoration: none;
+  color: #f0ffffde;
+  margin-bottom: 10px;
+  text-decoration: none;
 }
 
 .btn-login {
-    width: 50%;
-    padding: 16px 0px;
-    margin: 25px;
-    border: none;
-    border-radius: 10px;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 4px;
-    color: #082F4A;
-    background: #E0E0E0;
-    cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #31353B;
+  width: 50%;
+  padding: 16px 0px;
+  margin: 25px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: #082f4a;
+  background: #e0e0e0;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px #31353b;
 }
 
 .btn-login:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 450px){
-    .header > img {
-        left: 0;
-        right: 0;
-        margin: auto;
-        position: absolute;
-    }
+@media screen and (max-width: 450px) {
+  .header > img {
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+  }
 
-    .card-login {
-        width: 250px;
-        margin-top: 150px;
-    }
+  .card-login {
+    width: 250px;
+    margin-top: 150px;
+  }
 }
 
-@media screen and (max-width: 950px){
-    body {
-        background-size: 100vw 100vh;
-    }
-    
-    .header > img {
-        left: 0;
-        right: 0;
-        margin: auto;
-        position: absolute;
-    }
+@media screen and (max-width: 950px) {
+  body {
+    background-size: 100vw 100vh;
+  }
 
-    .card-login {
-        margin-top: 150px;
-    }
+  .header > img {
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+  }
+
+  .card-login {
+    margin-top: 150px;
+  }
 }
