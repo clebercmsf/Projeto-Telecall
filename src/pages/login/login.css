@@ -2,8 +2,9 @@
 
 body {
   font-family: "Noto Sans", sans-serif;
-  background-image: url("../../assets/img/telecall-background-login.jpg");
+  background-image: url("../../assets/img/telecall-background-login-light.png");
   background-size: cover;
+  transition: background 0.2s linear;
 }
 
 .header {
@@ -158,9 +159,7 @@ body {
 } */
 
 body.dark-mode {
-  background-image: none;
-  background-color:black;
-  color: #31353B;
+  background-image: url(../../assets/img/telecall-background-login-dark.png);
 }
 
 body.dark-mode .login {

@@ -5,6 +5,7 @@ body {
   background-image: url("../../assets/img/telecall-background-login.jpg");
   background-size: cover;
   margin-bottom: 25px;
+  transition: background 0.2s linear;
 }
 
 .header {
@@ -209,9 +210,7 @@ body {
 /* darkmode */
 
 body.dark-mode {
-  background-image: none;
-  background-color:black;
-  color: #31353B;
+  background-image: url(../../assets/img/telecall-background-login-dark.png);
 }
 
 body.dark-mode .register {
