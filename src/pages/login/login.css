@@ -120,7 +120,7 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 450px) {
+@media (max-width: 450px) {
   .header > img {
     left: 0;
     right: 0;
@@ -134,7 +134,7 @@ body {
   }
 }
 
-@media screen and (max-width: 950px) {
+@media (max-width: 950px) {
   body {
     background-size: 100vw 100vh;
   }
