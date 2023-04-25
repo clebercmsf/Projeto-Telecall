@@ -121,13 +121,6 @@ body {
 }
 
 @media (max-width: 450px) {
-  .header > img {
-    left: 0;
-    right: 0;
-    margin: auto;
-    position: absolute;
-  }
-
   .card-login {
     width: 250px;
     margin-top: 150px;
@@ -144,6 +137,10 @@ body {
     right: 0;
     margin: auto;
     position: absolute;
+  }
+
+  .header > img:hover {
+    transform: none;
   }
 
   .card-login {

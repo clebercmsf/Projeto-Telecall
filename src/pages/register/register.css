@@ -176,21 +176,14 @@ body {
   visibility: hidden;
 }
 
-@media screen and (max-width: 450px) {
-  .header > img {
-    left: 0;
-    right: 0;
-    margin: auto;
-    position: absolute;
-  }
-
-  .card-register {
+@media (max-width: 450px) {
+  .card-login {
     width: 250px;
     margin-top: 150px;
   }
 }
 
-@media screen and (max-width: 950px) {
+@media (max-width: 950px) {
   body {
     background-size: 100vw 100vh;
   }
@@ -202,7 +195,11 @@ body {
     position: absolute;
   }
 
-  .card-register {
+  .header > img:hover {
+    transform: none;
+  }
+
+  .card-login {
     margin-top: 150px;
   }
 }
