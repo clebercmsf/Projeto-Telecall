@@ -1,18 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="teste.css">
-  <title>Document</title>
+	<title>Cadastro de usuário</title>
 </head>
-
 <body>
-  <h1>Teste Cor</h1>
-  <button id="dark-mode-toggle">Tema Escuro</button>
-</body>
-<script src="teste.js"></script>
+	<form>
+		<label for="usuario">Usuário:</label>
+		<input type="text" id="usuario" name="usuario"><br><br>
+		<label for="senha">Senha:</label>
+		<input type="password" id="senha" name="senha"><br><br>
+		<input type="submit" value="Cadastrar" onclick="cadastrarUsuario()">
+	</form>
 
+
+  <button><a href="testeLogin.html">login</a></button>
+
+	<script>
+    function setCookie(nome, valor) {
+			var agora = new Date();
+			var expiracao = new Date(agora.getTime() + (30 * 24 * 60 * 60 * 1000)); // expira em 30 dias
+			document.cookie = nome + "=" + valor + ";expires=" + expiracao.toUTCString() + ";path=/";
+		}
+
+		function cadastrarUsuario() {
+			// obter os valores inputados pelo usuário
+			var usuario = document.getElementById("usuario").value;
+			var senha = document.getElementById("senha").value;
+
+			// aqui você pode validar os dados do usuário, como verificando se o campo de usuário não está vazio
+
+			// armazenar os dados do usuário em cookies
+			setCookie("usuario", usuario);
+			setCookie("senha", senha);
+
+			// exibir uma mensagem de sucesso
+			alert("Usuário cadastrado com sucesso!");
+		
+
+		// function setCookie(nome, valor) {
+		// 	var agora = new Date();
+		// 	var expiracao = new Date(agora.getTime() + (30 * 24 * 60 * 60 * 1000)); // expira em 30 dias
+		// 	document.cookie = nome + "=" + valor + ";expires=" + expiracao.toUTCString() + ";path=/";
+		// }
+  }
+	</script>
+</body>
 </html>
