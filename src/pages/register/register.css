@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
-@import "../../style.css";
 
 body {
   font-family: "Noto Sans", sans-serif;
@@ -205,4 +204,73 @@ body {
   .card-register {
     margin-top: 150px;
   }
+}
+
+/* darkmode */
+
+body.dark-mode {
+  background-image: none;
+  background-color:black;
+  color: #31353B;
+}
+
+body.dark-mode .register {
+  color: #4A0A10;
+}
+
+body.dark-mode .register a {
+  color: #4A0A10;
+}
+
+body.dark-mode .register a:hover {
+  text-decoration: underline #4A0A10;
+}
+
+body.dark-mode .card-register {
+  background: #e6e6e6;
+  box-shadow: 0px 10px 40px #4A0A10;
+}
+
+body.dark-mode .card-register > h1 {
+  color: #4A0A10;
+}
+
+body.dark-mode .textfield > input {
+  background: #4A0A10;
+  color: #e6e6e6;
+  box-shadow: 0px 10px 40px -12px #4A0A10;
+}
+
+body.dark-mode .textfield > input::placeholder {
+  color: #f0ffffde;
+}
+
+body.dark-mode .textfield > input:focus {
+  border: 3px solid #8a131d;
+}
+
+.gender > input {
+  border: 2px solid #4A0A10;
+}
+
+.gender > input::before {
+  background: #4A0A10;
+}
+
+.gender > input:focus {
+  box-shadow: 0px 0px 5px #4A0A10;
+}
+
+body.dark-mode .textfield > label {
+  color: #4A0A10;
+}
+
+body.dark-mode .btn-register {
+  color: #e6e6e6;
+  background: #4A0A10;
+  box-shadow: 0px 10px 40px -12px #4A0A10;
+}
+
+.span-required {
+  color: #8a131d;
 }

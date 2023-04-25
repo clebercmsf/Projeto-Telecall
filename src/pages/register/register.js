@@ -11,20 +11,10 @@ form.addEventListener("submit", (event) => {
   userValidator();
   passwordValidator();
   passwordConfirm();
-
-  const user = document.querySelector("#username").value;
-  const password = document.querySelector("#password").value;
-
-  // Armazenando os dados no localStorage
-  localStorage.setItem("user", user);
-  localStorage.setItem("password", password);
-
-  // Redirecionando o usuário para uma página de sucesso (opcional)
-  window.location.href = "../login/login.html";
 });
 
 function setError(index) {
-  field[index].style.border = "2px solid #5398C9";
+  field[index].style.border = "3px solid #CA1C2A";
   spans[index].style.visibility = "visible";
 }
 
@@ -108,3 +98,15 @@ tellInput.addEventListener("keypress", () => {
     tellInput.value += "-";
   }
 });
+
+// dark-mode
+const darkModeToggle = document.querySelector("#dark-mode-toggle");
+
+darkModeToggle.addEventListener("click", function() {
+  document.body.classList.toggle("dark-mode");
+  if(document.body.classList.contains("dark-mode")) {
+    darkModeToggle.textContent = "Tema Claro";
+  } else {
+    darkModeToggle.textContent = "Tema Escuro";
+  }
+})
