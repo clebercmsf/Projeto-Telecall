@@ -103,10 +103,20 @@ tellInput.addEventListener("keypress", () => {
 const darkModeToggle = document.querySelector("#dark-mode-toggle");
 
 darkModeToggle.addEventListener("click", function() {
-  document.body.classList.toggle("dark-mode");
-  if(document.body.classList.contains("dark-mode")) {
-    darkModeToggle.textContent = "Tema Claro";
-  } else {
-    darkModeToggle.textContent = "Tema Escuro";
-  }
+  document.body.classList.toggle("dark-mode"),
+  switchLogo();
+  // if(document.body.classList.contains("dark-mode")) {
+  //   darkModeToggle.textContent = "Tema Claro";
+  // } else {
+  //   darkModeToggle.textContent = "Tema Escuro";
+  // }
 })
+  var logoLight = "../../assets/img/telecall-logo4-light.png";
+  var logoDark = "../../assets/img/telecall-logo4-dark.png";
+
+function switchLogo() {
+  document.getElementById("logo").src = logoDark;
+  let aux = logoDark;
+  logoDark = logoLight;
+  logoLight = aux;
+}
