@@ -14,7 +14,7 @@ form.addEventListener("submit", (event) => {
 });
 
 function setError(index) {
-  field[index].style.border = "3px solid #CA1C2A";
+  field[index].style.border = "3px solid #5398c9";
   spans[index].style.visibility = "visible";
 }
 
@@ -99,17 +99,33 @@ tellInput.addEventListener("keypress", () => {
   }
 });
 
+// register
+function setCookie(name, value) {
+  var now = new Date();
+  var expires = new Date(now.getTime() + (30 * 24 * 60 * 60 * 1000));
+  document.cookie = name + "=" + value + ";expires=" + expires.toUTCString() + ";path=/";
+}
+
+function userRegister() {
+  if(document.getElementById("username").value != "" && document.getElementById("password").value != "") {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  setCookie("username", username);
+  setCookie("password", password);
+
+  alert("Usuário cadastrado com sucesso!");
+  window.location.href = "../login/login.html";
+  }
+}
+
+
 // dark-mode
 const darkModeToggle = document.querySelector("#dark-mode-toggle");
 
 darkModeToggle.addEventListener("click", function() {
   document.body.classList.toggle("dark-mode"),
   switchLogo();
-  // if(document.body.classList.contains("dark-mode")) {
-  //   darkModeToggle.textContent = "Tema Claro";
-  // } else {
-  //   darkModeToggle.textContent = "Tema Escuro";
-  // }
 })
   var logoLight = "../../assets/img/telecall-logo4-light.png";
   var logoDark = "../../assets/img/telecall-logo4-dark.png";

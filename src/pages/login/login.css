@@ -30,7 +30,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-  color: #f0ffffde;
+  color: #e6e6e6;
 }
 
 .login a {
@@ -57,7 +57,7 @@ body {
 
 .card-login > h1 {
   align-self: center;
-  color: #f0ffffde;
+  color: #e6e6e6;
   font-weight: 800;
   font-size: 40px;
   margin: 0;
@@ -78,7 +78,7 @@ body {
   border-radius: 10px;
   padding: 15px;
   background: #0e4e7c;
-  color: #5398c9;
+  color: #f0ffff94;
   font-size: 12pt;
   box-shadow: 0px 10px 40px -12px #082f4a;
   outline: none;
@@ -86,7 +86,7 @@ body {
 }
 
 .textfield > input::placeholder {
-  color: #f0ffff94;
+  color: #5398c9;
 }
 
 .textfield > input:focus {
@@ -94,7 +94,7 @@ body {
 }
 
 .textfield > label {
-  color: #f0ffffde;
+  color: #fff0f0de;
   margin-bottom: 10px;
   text-decoration: none;
 }
@@ -118,6 +118,10 @@ body {
 .btn-login:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
+}
+
+.btn-login-submit {
+  text-align: center;
 }
 
 @media (max-width: 450px) {

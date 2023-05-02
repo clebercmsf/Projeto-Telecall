@@ -22,9 +22,9 @@
     <section class="login">
         <section class="card-login">
             <h1>LOGIN</h1>
-            <form id="form"></form>
+            <form id="form">
             <div class="textfield">
-                <label for="user">Usuário</label>
+                <label for="username">Usuário</label>
                 <input type="text" placeholder="Usuário" id="username" autocomplete="off">
             </div>
             <div class="textfield">
@@ -34,14 +34,12 @@
             <div class="register">
                 <label><br>Ainda não possui uma conta? <a href="../register/register.html">Crie aqui.</a></label>
             </div>
-            <button type="submit" class="btn-login" onclick="login()">Enviar</button>
+            <div class="btn-login-submit">
+                <input type="submit" class="btn-login" value="enviar" onclick="event.preventDefault(); loginValidate();">
+            </div>
             </form>
         </section>
     </section>
-
-    <!-- <footer>
-        <button id="dark-mode-toggle" class="dark-mode-btn">Tema Escuro</button>
-    </footer> -->
 </body>
 <script src="login.js"></script>
 

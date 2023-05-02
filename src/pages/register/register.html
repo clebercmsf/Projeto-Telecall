@@ -25,8 +25,7 @@
       <form id="form">
         <div class="textfield">
           <label for="name">Nome</label>
-          <input type="text" placeholder="Nome" name="nome" class="required" autocomplete="off"
-            oninput="nameValidator()" />
+          <input type="text" placeholder="Nome" name="nome" class="required" autocomplete="off" oninput="nameValidator()" />
           <span class="span-required">Nome deve ter entre 15 e 60 caracteres alfabéticos.</span>
         </div>
         <div class="textfield">
@@ -62,7 +61,7 @@
         </div>
         <div class="textfield">
           <label for="user"><br />Usuário</label>
-          <input type="text" placeholder="Usuário" class="required" id="username" oninput="userValidator()" />
+          <input type="text" placeholder="Usuário" class="required" id="username" oninput="userValidator()" autocomplete="off"/>
           <span class="span-required">Usuário deve ter 6 caracteres alfabéticos.</span>
         </div>
         <div class="textfield">
@@ -80,7 +79,9 @@
           <label>Já possui uma conta?
             <a href="../login/login.html">Entre aqui.</a></label>
         </div>
-        <button type="submit" class="btn-register">Enviar</button>
+        <div>
+          <input type="submit" class="btn-register" value="enviar" onclick="userRegister()">
+      </div>
       </form>
     </section>
   </section>
