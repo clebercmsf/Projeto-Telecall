@@ -28,18 +28,19 @@ function loginValidate() {
 }
 
 // dark-mode
-const darkModeToggle = document.querySelector("#dark-mode-toggle");
+const chk = document.getElementById("chk")
 
-darkModeToggle.addEventListener("click", function() {
+chk.addEventListener("change", () => {
   document.body.classList.toggle("dark-mode"),
   switchLogo();
 })
-  var logoLight = "../../assets/img/telecall-logo4-light.png";
-  var logoDark = "../../assets/img/telecall-logo4-dark.png";
+
+var logoLight = "../../assets/img/telecall-logo4-light.png";
+var logoDark = "../../assets/img/telecall-logo4-dark.png";
 
 function switchLogo() {
-  document.getElementById("logo").src = logoDark;
-  let aux = logoDark;
-  logoDark = logoLight;
-  logoLight = aux;
+document.getElementById("logo").src = logoDark;
+let aux = logoDark;
+logoDark = logoLight;
+logoLight = aux;
 }
