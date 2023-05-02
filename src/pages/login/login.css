@@ -141,6 +141,8 @@ body {
     right: 0;
     margin: auto;
     position: absolute;
+    width: 100px;
+    height: 100px;
   }
 
   .header > img:hover {
@@ -148,7 +150,7 @@ body {
   }
 
   .card-login {
-    margin-top: 150px;
+    margin-top: 80px;
   }
 }
 
@@ -207,11 +209,15 @@ body.dark-mode .btn-login {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  margin: 25px auto 20px -12px;
+  position: static;
+  bottom: 0;
 }
 
 .dark-mode-button {
   opacity: 0;
-  position: absolute;
+  position: relative;
 
 }
 
