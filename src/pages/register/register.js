@@ -114,11 +114,14 @@ function userRegister() {
   setCookie("username", username);
   setCookie("password", password);
 
-  alert("Usuário cadastrado com sucesso!");
-  window.location.href = "../login/login.html";
+  // alert("Usuário cadastrado com sucesso!");
+  document.querySelector('.notification-container').style.display = 'flex';
+
+  setTimeout(function() {
+    window.location.href = '../login/login.html';
+  }, 2000);
   }
 }
-
 
 // dark-mode
 const chk = document.getElementById("chk")

@@ -21,9 +21,18 @@ function loginValidate() {
   var passwordRegistered = getCookie("password");
 
   if (username === userRegistered && password === passwordRegistered) {
-    window.location.href = 'http://www.google.com';
+    // window.location.href = 'http://www.google.com';
+    document.querySelector('.notification-container-success').style.display = 'flex';
+
+    setTimeout(function() {
+      window.location.href = 'http://www.google.com';
+    }, 2000);
   } else {
-    alert("Usuário ou senha incorretos!");
+    document.querySelector('.notification-container-fail').style.display = 'flex';
+
+    setTimeout(function() {
+      document.querySelector('.notification-container-fail').style.display = 'none';
+    }, 2000);
   }
 }
 
