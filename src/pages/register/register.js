@@ -106,7 +106,7 @@ function setCookie(name, value) {
 }
 
 function userRegister() {
-  if(document.getElementById("username").value != "" && document.getElementById("password").value != "") {
+  if(document.getElementById("username").value.length === 6 && document.getElementById("password").value != "" && document.getElementById("name").value.length >= 15 && document.getElementById("name").value.length <= 60) {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
 
