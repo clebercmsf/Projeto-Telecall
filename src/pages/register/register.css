@@ -177,9 +177,9 @@ body {
 }
 
 @media (max-width: 450px) {
-  .card-login {
+  .card-register {
     width: 250px;
-    margin-top: 150px;
+    margin-top: 80px;
   }
 }
 
@@ -201,7 +201,7 @@ body {
     transform: none;
   }
 
-  .card-login {
+  .card-register {
     margin-top: 80px;
   }
 }
