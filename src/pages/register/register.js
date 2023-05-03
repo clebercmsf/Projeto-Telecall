@@ -106,7 +106,7 @@ function setCookie(name, value) {
 }
 
 function userRegister() {
-  if(document.getElementById("username").value.length === 6 && document.getElementById("password").value != "" && document.getElementById("name").value.length >= 15 && document.getElementById("name").value.length <= 60) {
+  if(document.getElementById("name").value.length >= 15 && document.getElementById("name").value.length <= 60 && document.getElementById("username").value.length === 6 && document.getElementById("password").value.length >= 8) {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
 
@@ -141,10 +141,11 @@ function activate(msg) {
 const chk = document.getElementById("chk")
 
 chk.addEventListener("change", () => {
-  document.body.classList.toggle("dark-mode"),
+  document.body.classList.toggle("dark-mode");
   switchLogo();
 })
 
+// switchLogo
 var logoLight = "../../assets/img/telecall-logo4-light.png";
 var logoDark = "../../assets/img/telecall-logo4-dark.png";
 

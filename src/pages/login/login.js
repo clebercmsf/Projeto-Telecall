@@ -57,10 +57,11 @@ function activate(msg) {
 const chk = document.getElementById("chk")
 
 chk.addEventListener("change", () => {
-  document.body.classList.toggle("dark-mode"),
+  document.body.classList.toggle("dark-mode");
   switchLogo();
 })
 
+// switchLogo
 var logoLight = "../../assets/img/telecall-logo4-light.png";
 var logoDark = "../../assets/img/telecall-logo4-dark.png";
 
