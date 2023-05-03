@@ -21,19 +21,36 @@ function loginValidate() {
   var passwordRegistered = getCookie("password");
 
   if (username === userRegistered && password === passwordRegistered) {
-    // window.location.href = 'http://www.google.com';
-    document.querySelector('.notification-container-success').style.display = 'flex';
+    activate(msgSuccess);
 
     setTimeout(function() {
       window.location.href = 'http://www.google.com';
     }, 2000);
   } else {
-    document.querySelector('.notification-container-fail').style.display = 'flex';
-
-    setTimeout(function() {
-      document.querySelector('.notification-container-fail').style.display = 'none';
-    }, 2000);
+    activate(msgError);
   }
+}
+
+// alert
+const divMessage = document.querySelector(".alert");
+
+const msgSuccess = "Login efetuado com sucesso!";
+const msgError = "Usuário ou Senha inválidos!";
+
+function activate(msg) {
+  const message = document.createElement("div");
+  if(msg === msgSuccess) {
+    message.classList.add("messageSuccess");
+  } else {
+    message.classList.add("messageError");
+  }
+  
+  message.innerText = msg;
+  divMessage.appendChild(message);
+
+  setTimeout(() => {
+    message.style.display = "none";
+  }, 2000);
 }
 
 // dark-mode

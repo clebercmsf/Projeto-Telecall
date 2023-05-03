@@ -82,7 +82,6 @@ cellInput.addEventListener("keypress", () => {
     cellInput.value += "-";
   }
 });
-//
 
 // tellNumber input format;
 const tellInput = document.querySelector("#t-number");
@@ -114,13 +113,28 @@ function userRegister() {
   setCookie("username", username);
   setCookie("password", password);
 
-  // alert("Usuário cadastrado com sucesso!");
-  document.querySelector('.notification-container').style.display = 'flex';
+  activate(msgSuccess);
 
   setTimeout(function() {
     window.location.href = '../login/login.html';
   }, 2000);
   }
+}
+
+// alert
+const divMessage = document.querySelector(".alert");
+
+const msgSuccess = "Cadastro efetuado com sucesso!";
+
+function activate(msg) {
+  const message = document.createElement("div");
+  message.classList.add("messageSuccess");
+  message.innerText = msg;
+  divMessage.appendChild(message);
+
+  setTimeout(() => {
+    message.style.display = "none";
+  }, 2000);
 }
 
 // dark-mode

@@ -154,59 +154,71 @@ body {
   }
 }
 
-.notification-container-success {
+/* alert */
+.messageSuccess {
+  padding: 19px 60px;
   position: fixed;
-  top: -340px;
-  left: -20px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: right; 
-  align-items: center;
-  z-index: 9999;
-  display: none;
-}
-
-.notification-container-fail {
-  position: fixed;
-  top: -340px;
-  left: -20px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  z-index: 9999;
-  display: none;
-}
-
-.notification {
-  position: relative;
-  padding: 20px;
-  border-radius: 5px;
-  font-size: 18px;
-  color: white;
-  text-align: center;
-  border-radius: 15px;
-}
-
-.notification.success {
+  top: 20px;
+  right: 105px;
   background-color: #3b8b40;
   box-shadow: 0px 10px 40px -12px #58e461;
+  border-radius: 5px;
+  color: #fff;
+  animation: slidein 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.notification.fail {
+.messageError {
+  padding: 19px 60px;
+  position: fixed;
+  top: 20px;
+  right: 105px;
   background-color: #CA1C2A;
   box-shadow: 0px 10px 40px -12px #8a131d;
+  border-radius: 5px;
+  color: #fff;
+  animation: slidein 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.close-btn {
+@keyframes slidein {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.messageSuccess::before {
+  content: "";
   position: absolute;
-  top: 5px;
-  right: 10px;
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: time 2s forwards;
+}
+
+.messageError::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: time 2s forwards;
+}
+
+@keyframes time {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 /* darkmode button*/
@@ -242,7 +254,7 @@ body {
 }
 
 .dark-mode-label .ball {
-  background-color: #fff;
+  background-color: #e6e6e6;
   border-radius: 50%;
   position: absolute;
   top: 2px;
@@ -315,12 +327,12 @@ body.dark-mode .btn-login {
   box-shadow: 0px 10px 40px -12px #4A0A10;
 }
 
-body.dark-mode .notification.success {
+body.dark-mode .messageSuccess {
   background-color: #1a3d1c;
   box-shadow: 0px 10px 40px -12px #3b8b40;
 }
 
-body.dark-mode .notification.fail {
+body.dark-mode .messageError {
   background-color: #4A0A10;
   box-shadow: 0px 10px 40px -12px #8a131d;
 }
