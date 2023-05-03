@@ -41,7 +41,7 @@
         </div>
         <div class="textfield">
           <label for="m-name"><br />Nome Materno</label>
-          <input type="text" placeholder="Nome Materno" />
+          <input type="text" placeholder="Nome Materno" autocomplete="off"/>
         </div>
         <div class="textfield">
           <label for="cpf"><br />CPF</label>
@@ -49,15 +49,15 @@
         </div>
         <div class="textfield">
           <label for="c-number"><br />Numero de Celular</label>
-          <input type="tel" placeholder="(+55)xx-xxxxx-xxxx" maxlength="18" id="c-number" />
+          <input type="tel" placeholder="(+55)xx-xxxxx-xxxx" maxlength="18" id="c-number" autocomplete="off"/>
         </div>
         <div class="textfield">
           <label for="t-number"><br />Numero de Telefone Fixo</label>
-          <input type="tel" placeholder="(+55)xx-xxxx-xxxx" maxlength="17" id="t-number" />
+          <input type="tel" placeholder="(+55)xx-xxxx-xxxx" maxlength="17" id="t-number" autocomplete="off"/>
         </div>
         <div class="textfield">
           <label for="address"><br />Endereço</label>
-          <input type="text" placeholder="Endereço" />
+          <input type="text" placeholder="Endereço" autocomplete="off"/>
         </div>
         <div class="textfield">
           <label for="user"><br />Usuário</label>
@@ -66,13 +66,12 @@
         </div>
         <div class="textfield">
           <label for="password">Senha</label>
-          <input type="password" placeholder="Senha" class="required" oninput="passwordValidator()" />
+          <input type="password" placeholder="Senha" class="required" oninput="passwordValidator()" autocomplete="off"/>
           <span class="span-required">A senha deve ter ao menos 8 caracteres alfabéticos.</span>
         </div>
         <div class="textfield">
           <label for="conf-password">Confirme a Senha</label>
-          <input type="password" placeholder="Confirme a Senha" class="required" id="password"
-            oninput="passwordConfirm()" />
+          <input type="password" placeholder="Confirme a Senha" class="required" id="password" oninput="passwordConfirm()" autocomplete="off"/>
           <span class="span-required">Senhas não conferem.</span>
         </div>
         <div class="login">
