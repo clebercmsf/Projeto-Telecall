@@ -7,6 +7,7 @@
 * white3: #e6e6e6
 * blue1: #0E4E7C
 * blue2: #082F4A
+* blue2: #003b71
 * blue3: #5398C9
 * blue4: #95B9D2
 * gray1: #31353B
