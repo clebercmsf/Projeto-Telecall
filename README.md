@@ -22,4 +22,5 @@ O site deve prover uma barra com 2 mecanismos de acessibilidade.
 - O sistema deve ser responsivo e devem ser utilizados Frameworks de CSS como Materialize, Bootstrap, Foundation, Pure ou outro.  
 - O sistema deve utilizar a identidade visual da Telecall.
 
+---
 ```Para a inicialização do site, abra o arquivo "index.html".```
