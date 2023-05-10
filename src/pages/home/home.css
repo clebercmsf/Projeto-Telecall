@@ -13,21 +13,20 @@
   --color-neutral-9: #87898d;
   --color-neutral-10: #656565;
   --color-neutral-11: #e6e6e6;
-}
 
-body.dark-mode :root {
-  --color-neutral-0: #4A0A10;
-  --color-neutral-1: #ffffff;
-  --color-neutral-2: #E0E0E0;
-  --color-neutral-3: #0E4E7C;
-  --color-neutral-4: #082F4A;
-  --color-neutral-5: #003b71;
-  --color-neutral-6: #5398C9;
-  --color-neutral-7: #95B9D2;
-  --color-neutral-8: #31353B;
-  --color-neutral-9: #87898d;
-  --color-neutral-10: #656565;
-  --color-neutral-11: #e6e6e6;
+  /* dark-mode */
+  --color-neutral-12: #4A0A10;
+  --color-neutral-13: #ffffff;
+  --color-neutral-14: #E0E0E0;
+  --color-neutral-15: #0E4E7C;
+  --color-neutral-16: #082F4A;
+  --color-neutral-17: #003b71;
+  --color-neutral-18: #5398C9;
+  --color-neutral-19: #95B9D2;
+  --color-neutral-20: #31353B;
+  --color-neutral-21: #87898d;
+  --color-neutral-22: #656565;
+  --color-neutral-23: #e6e6e6;
 }
 
 * {
@@ -200,7 +199,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: var(--color-neutral-4);
-  color: var(--color-neutral-9);
+  color: var(--color-neutral-1);
   border-radius: 30px;
 }
 
@@ -254,6 +253,7 @@ header {
 }
 
 #map {
+  border: 2px solid var(--color-neutral-5);
   border-radius: 20px;
   box-shadow: 0 10px 40px var(--color-neutral-9);
 }
@@ -408,7 +408,6 @@ footer {
   font-weight: 100;
 }
 
-/* dard-mode */
 /* darkmode button*/
 .dark-mode-footer {
   display: flex;
@@ -463,4 +462,141 @@ footer {
 
 .fa-sun {
   color: #f39c12;
+}
+
+/* darkmode */
+body.dark-mode {
+  background-image: url(../../assets/img/telecall-background-login-dark.png);
+}
+
+body.dark-mode .nav-bar {
+  background-color: var(--color-neutral-12);
+}
+
+body.dark-mode .logo {
+  background-color: var(--color-neutral-1);
+}
+
+body.dark-mode .menu {
+  color: var(--color-neutral-1);
+}
+
+body.dark-mode .menu li:hover {
+  text-decoration: underline var(--color-neutral-3);
+}
+
+body.dark-mode .login-btn button {
+  background-color: var(--color-neutral-3);
+  color: var(--color-neutral-1);
+}
+
+body.dark-mode .login-btn button:hover {
+  background-color: var(--color-neutral-5);
+}
+
+body.dark-mode .login a:hover {
+  text-decoration: underline var(--color-neutral-4);
+}
+
+body.dark-mode .carouselSection {
+  box-shadow: 0 10px 40px var(--color-neutral-9);
+}
+
+body.dark-mode .containerSection h1 {
+  color: var(--color-neutral-5);
+  text-shadow: -3px 2px 10px var(--color-neutral-9);
+}
+
+body.dark-mode .card {
+  box-shadow: 0 10px 40px var(--color-neutral-9);
+}
+
+body.dark-mode .card img {
+  color: var(--color-neutral-0);
+}
+
+body.dark-mode .card h2 {
+  color: var(--color-neutral-4);
+}
+
+body.dark-mode .card p {
+  color: var(--color-neutral-10);
+}
+
+body.dark-mode .container-card button {
+  background-color: var(--color-neutral-4);
+  color: var(--color-neutral-1);
+}
+
+body.dark-mode .container-card button:hover {
+  background-color: var(--color-neutral-5);
+}
+
+body.dark-mode .container li {
+  color: var(--color-neutral-4);
+}
+
+body.dark-mode .container-content p {
+  color: var(--color-neutral-4);
+}
+
+body.dark-mode #map {
+  border: 2px solid var(--color-neutral-5);
+  box-shadow: 0 10px 40px var(--color-neutral-9);
+}
+
+/* footer */
+body.dark-mode footer {
+  color: var(--color-neutral-4);
+  box-shadow: 0 -10px 40px var(--color-neutral-9);
+}
+
+body.dark-mode #footer_content {
+  background-color: var(--color-neutral-2);
+}
+
+body.dark-mode #footer_contacts p {
+  color: var(--color-neutral-4);
+}
+
+body.dark-mode #footer_social_media .footer-link {
+  color: var(--color-neutral-2);
+}
+
+body.dark-mode #instagram {
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+body.dark-mode #facebook {
+  background-color: #4267b3;
+}
+
+body.dark-mode #linkedin {
+  background-color: #0073B1;
+}
+
+body.dark-mode .footer-link {
+  color: var(--color-neutral-4);
+}
+
+body.dark-mode .footer-link:hover {
+  color: var(--color-neutral-5);
+}
+
+body.dark-mode #footer_subscribe p {
+  color: var(--color-neutral-4);
+}
+
+body.dark-mode #input-group {
+  background-color: var(--color-neutral-4);
+}
+
+body.dark-mode #input_group>button {
+  background-color: var(--color-neutral-4);
+  color: var(--color-neutral-6);
+}
+
+body.dark-mode #footer_copyright {
+  color: var(--color-neutral-11);
+  background-color: var(--color-neutral-8);
 }
