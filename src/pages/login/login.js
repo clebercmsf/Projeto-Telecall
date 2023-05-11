@@ -24,7 +24,7 @@ function loginValidate() {
     activate(msgSuccess);
 
     setTimeout(function() {
-      window.location.href = 'http://www.google.com';
+      window.location.href = '../home/home.html';
     }, 2000);
   } else {
     activate(msgError);
