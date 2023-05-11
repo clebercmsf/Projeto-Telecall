@@ -17,16 +17,17 @@
   /* dark-mode */
   --color-neutral-12: #4A0A10;
   --color-neutral-13: #8a131d;
-  --color-neutral-14: #E0E0E0;
-  --color-neutral-15: #0E4E7C;
-  --color-neutral-16: #082F4A;
-  --color-neutral-17: #003b71;
-  --color-neutral-18: #5398C9;
-  --color-neutral-19: #95B9D2;
-  --color-neutral-20: #31353B;
-  --color-neutral-21: #87898d;
-  --color-neutral-22: #656565;
-  --color-neutral-23: #e6e6e6;
+  --color-neutral-14: #CA1C2A;
+  --color-neutral-15: #ffffff;
+  --color-neutral-16: #000000;
+  --color-neutral-17: #082F4A;
+  --color-neutral-18: #003b71;
+  --color-neutral-19: #5398C9;
+  --color-neutral-20: #95B9D2;
+  --color-neutral-21: #31353B;
+  --color-neutral-22: #87898d;
+  --color-neutral-23: #656565;
+  --color-neutral-24: #e6e6e6;
 }
 
 * {
@@ -95,10 +96,14 @@ header {
   font-size: 17px;
 }
 
-.menu li:hover {
+.menu-link {
+  text-decoration: none;
+  color: var(--color-neutral-1);
+}
+
+.menu-link:hover {
   text-decoration: underline var(--color-neutral-3);
-  transition: text-decoration 0.2s linear;
-  border-bottom: 30px;
+  transition: all 0.2s;
 }
 
 .login-btn {
@@ -269,13 +274,20 @@ footer {
   box-shadow: 0 -10px 40px var(--color-neutral-9);
 }
 
-.logo-telecall {
+footer img {
   width: 150px;
   right: 60px;
 }
 
-.footer-link {
+.link {
   text-decoration: none;
+  color: var(--color-neutral-4);
+  transition: all 0.4s;
+}
+
+.link:hover {
+  color: var(--color-neutral-5);
+  text-decoration: underline;
 }
 
 #footer_content {
@@ -300,7 +312,7 @@ footer {
   margin-top: 1.5rem;
 }
 
-#footer_social_media .footer-link {
+#footer_social_media .link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -312,11 +324,11 @@ footer {
 
 }
 
-#footer_social_media>.footer-link>i {
+#footer_social_media>.link>i {
   font-size: 1.25rem;
 }
 
-#footer_social_media>.footer-link:hover {
+#footer_social_media>.link:hover {
   opacity: 0.8;
   text-decoration: none;
 }
@@ -327,11 +339,11 @@ footer {
 }
 
 #facebook {
-  background-color: #4267b3;
+  background: #4267b3;
 }
 
 #linkedin {
-  background-color: #0073B1;
+  background: #0073B1;
 }
 
 .footer-list {
@@ -347,16 +359,6 @@ footer {
 
 .footer-list h2 {
   font-weight: 650;
-}
-
-.footer-link {
-  color: var(--color-neutral-4);
-  transition: all 0.4s;
-}
-
-.footer-link:hover {
-  color: var(--color-neutral-5);
-  text-decoration: underline;
 }
 
 #footer_subscribe {
@@ -469,29 +471,39 @@ body.dark-mode {
   background-image: url(../../assets/img/telecall-background-login-dark.png);
 }
 
+body.dark-mode header {
+  box-shadow: 0 20px 40px var(--color-neutral-13);
+}
+
 body.dark-mode .nav-bar {
-  background-color: var(--color-neutral-12);
+  background-color: var(--color-neutral-13);
 }
 
 body.dark-mode .logo {
-  background-color: var(--color-neutral-1);
+  background-color: var(--color-neutral-12);
 }
 
 body.dark-mode .menu {
-  color: var(--color-neutral-1);
+  color: var(--color-neutral-15);
 }
 
-body.dark-mode .menu li:hover {
-  text-decoration: underline var(--color-neutral-3);
+body.dark-mode .menu-link {
+  color: var(--color-neutral-15);
+}
+
+body.dark-mode .menu-link:hover {
+  color: var(--color-neutral-14);
+  text-decoration: underline var(--color-neutral-14);
+  transition: all 0.4s;
 }
 
 body.dark-mode .login-btn button {
-  background-color: var(--color-neutral-13);
-  color: var(--color-neutral-1);
+  background-color: var(--color-neutral-12);
+  color: var(--color-neutral-15);
 }
 
 body.dark-mode .login-btn button:hover {
-  background-color: var(--color-neutral-0);
+  background-color: var(--color-neutral-14);
 }
 
 body.dark-mode .login a:hover {
@@ -503,12 +515,11 @@ body.dark-mode .carouselSection {
 }
 
 body.dark-mode .containerSection h1 {
-  color: var(--color-neutral-1);
-  text-shadow: -3px 2px 10px var(--color-neutral-0);
+  color: var(--color-neutral-15);
+  text-shadow: -3px 2px 10px var(--color-neutral-14);
 }
 
 body.dark-mode .card {
-  /* background-color: var(--color-neutral-0); */
   box-shadow: 0 10px 40px var(--color-neutral-13);
 }
 
@@ -517,87 +528,79 @@ body.dark-mode .card img {
 }
 
 body.dark-mode .card h2 {
-  color: var(--color-neutral-4);
+  color: var(--color-neutral-12);
 }
 
 body.dark-mode .card p {
-  color: var(--color-neutral-10);
+  color: var(--color-neutral-13);
 }
 
 body.dark-mode .container-card button {
-  background-color: var(--color-neutral-4);
-  color: var(--color-neutral-1);
+  background-color: var(--color-neutral-12);
+  color: var(--color-neutral-15);
 }
 
 body.dark-mode .container-card button:hover {
-  background-color: var(--color-neutral-5);
+  background-color: var(--color-neutral-13);
 }
 
 body.dark-mode .container li {
-  color: var(--color-neutral-4);
+  color: var(--color-neutral-15);
 }
 
 body.dark-mode .container-content p {
-  color: var(--color-neutral-4);
+  color: var(--color-neutral-15);
 }
 
 body.dark-mode #map {
-  border: 2px solid var(--color-neutral-5);
-  box-shadow: 0 10px 40px var(--color-neutral-9);
+  border: 2px solid var(--color-neutral-13);
+  box-shadow: 0 10px 40px var(--color-neutral-14);
 }
 
 /* footer */
 body.dark-mode footer {
-  color: var(--color-neutral-4);
-  box-shadow: 0 -10px 40px var(--color-neutral-9);
+  color: var(--color-neutral-15);
+  box-shadow: 0 -10px 40px var(--color-neutral-12);
 }
 
 body.dark-mode #footer_content {
-  background-color: var(--color-neutral-2);
+  background-color: var(--color-neutral-13);
 }
 
 body.dark-mode #footer_contacts p {
-  color: var(--color-neutral-4);
+  color: var(--color-neutral-15);
 }
 
-body.dark-mode #footer_social_media .footer-link {
+body.dark-mode #footer_social_media .link {
   color: var(--color-neutral-2);
 }
 
+body.dark-mode #footer_social_media>.link:hover {
+  opacity: 1;
+  background-color: var(--color-neutral-14);
+}
+
 body.dark-mode #instagram {
-  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+  background: var(--color-neutral-12);
 }
 
 body.dark-mode #facebook {
-  background-color: #4267b3;
+  background: var(--color-neutral-12);
 }
 
 body.dark-mode #linkedin {
-  background-color: #0073B1;
+  background: var(--color-neutral-12);
 }
 
-body.dark-mode .footer-link {
-  color: var(--color-neutral-4);
+body.dark-mode .link {
+  color: var(--color-neutral-15);
 }
 
-body.dark-mode .footer-link:hover {
-  color: var(--color-neutral-5);
-}
-
-body.dark-mode #footer_subscribe p {
-  color: var(--color-neutral-4);
-}
-
-body.dark-mode #input-group {
-  background-color: var(--color-neutral-4);
-}
-
-body.dark-mode #input_group>button {
-  background-color: var(--color-neutral-4);
-  color: var(--color-neutral-6);
+body.dark-mode .link:hover {
+  color: var(--color-neutral-14);
 }
 
 body.dark-mode #footer_copyright {
-  color: var(--color-neutral-11);
-  background-color: var(--color-neutral-8);
+  color: var(--color-neutral-15);
+  background-color: var(--color-neutral-12);
 }
