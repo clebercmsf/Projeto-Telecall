@@ -106,6 +106,10 @@ header {
   transition: all 0.2s;
 }
 
+.submenu {
+  display: none;
+}
+
 .login-btn {
   display: flex;
   justify-content: center;
