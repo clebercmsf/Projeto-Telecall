@@ -141,6 +141,10 @@ header {
   box-shadow: 0 10px 40px var(--color-neutral-9);
 }
 
+.carousel-control-prev {
+  color: var(--color-neutral-0);
+}
+
 .containerSection {
   width: 100%;
   display: flex;
@@ -300,6 +304,11 @@ footer img {
 
 #footer_contacts img {
   margin-bottom: 1rem;
+}
+
+#footer_contacts img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
 }
 
 #footer_contacts p {
