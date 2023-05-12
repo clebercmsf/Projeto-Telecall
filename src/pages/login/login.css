@@ -16,11 +16,11 @@ body {
   width: 150px;
   height: 150px;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .header > img:hover {
   transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
 }
 
 .login {
@@ -113,11 +113,11 @@ body {
   background: #e0e0e0;
   cursor: pointer;
   box-shadow: 0px 10px 40px -12px #31353b;
+  transition: all 0.3s;
 }
 
 .btn-login:hover {
   transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
 }
 
 .btn-login-submit {

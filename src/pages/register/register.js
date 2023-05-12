@@ -137,6 +137,22 @@ function activate(msg) {
   }, 2000);
 }
 
+// up to top button
+window.onscroll = function () { showTopButton() };
+
+function showTopButton() {
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+    document.getElementById("btnTop").style.display = "block";
+  } else {
+    document.getElementById("btnTop").style.display = "none";
+  }
+}
+
+function upToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 // dark-mode
 const chk = document.getElementById("chk")
 
