@@ -73,11 +73,11 @@ header {
 .logo img {
   width: 150px;
   right: 60px;
+  transition: all 0.3s;
 }
 
 .logo img:hover {
   transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
 }
 
 .menu {
@@ -99,11 +99,11 @@ header {
 .menu-link {
   text-decoration: none;
   color: var(--color-neutral-1);
+  transition: all 0.5s;
 }
 
 .menu-link:hover {
   text-decoration: underline var(--color-neutral-3);
-  transition: all 0.2s;
 }
 
 .submenu {
@@ -125,6 +125,7 @@ header {
   background-color: var(--color-neutral-3);
   color: var(--color-neutral-1);
   border-radius: 30px;
+  transition: all 0.7s;
 }
 
 .login-btn button:hover {
@@ -138,6 +139,7 @@ header {
 
 .login a:hover {
   text-decoration: underline var(--color-neutral-4);
+  transition: all 0.2s;
 }
 
 .carouselSection {
@@ -180,11 +182,11 @@ header {
   box-shadow: 0 10px 40px var(--color-neutral-9);
   --bs-border-radius: 20px;
   margin: 13px;
+  transition: all 0.5s;
 }
 
 .card:hover {
   transform: scale(1.1);
-  transition: transform 0.5s ease-in-out;
 }
 
 .card img {
@@ -214,6 +216,7 @@ header {
   background-color: var(--color-neutral-4);
   color: var(--color-neutral-1);
   border-radius: 30px;
+  transition: all 0.5s;
 }
 
 .container-card button:hover {
@@ -270,6 +273,11 @@ header {
   border: 2px solid var(--color-neutral-5);
   border-radius: 20px;
   box-shadow: 0 10px 40px var(--color-neutral-9);
+  transition: all 0.5s;
+}
+
+#map:hover {
+  transform: scale(1.1);
 }
 
 #chip-title {
@@ -308,11 +316,11 @@ footer img {
 
 #footer_contacts img {
   margin-bottom: 1rem;
+  transition: all 0.5s;
 }
 
 #footer_contacts img:hover {
   transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
 }
 
 #footer_contacts p {
@@ -334,7 +342,7 @@ footer img {
   width: 2.5rem;
   color: var(--color-neutral-2);
   border-radius: 50%;
-  transition: all 0.4s;
+  transition: all 0.5s;
 
 }
 
@@ -439,11 +447,11 @@ footer img {
   cursor: pointer;
   padding: 15px;
   border-radius: 50px;
+  transition: all 0.3s;
 }
 
 #btnTop:hover {
   transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
 }
 
 /* darkmode button*/
