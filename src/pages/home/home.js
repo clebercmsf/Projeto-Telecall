@@ -21,6 +21,7 @@ chk.addEventListener("change", () => {
   document.body.classList.toggle("dark-mode");
   switchLogo();
   switchIcons();
+  switchIcons2();
 })
 
 
@@ -53,17 +54,20 @@ var cpaasIconDarkMode = "../../assets/icons/cpaas-icon-dark.png";
 var mobilityIconLightMode = "../../assets/icons/mobility-icon-light.png";
 var mobilityIconDarkMode = "../../assets/icons/mobility-icon-dark.png";
 
-var smartphoneIconLightMode = "../../assets/icons/smartphone-icon-dark.png";
-var smartphoneIconDarkMode = "../../assets/icons/smartphone-icon-light.png";
+var smartphoneIconLightMode = "../../assets/icons/smartphone-icon-light.png";
+var smartphoneIconDarkMode = "../../assets/icons/smartphone-icon-dark.png";
 
-var companyIconLightMode = "../../assets/icons/company-icon-dark.png";
-var companyIconDarkMode = "../../assets/icons/company-icon-light.png";
+var smartphoneIconLightMode = "../../assets/icons/smartphone-icon-light.png";
+var smartphoneIconDarkMode = "../../assets/icons/smartphone-icon-dark.png";
 
-var networkIconLightMode = "../../assets/icons/network-icon-dark.png";
-var networkIconDarkMode = "../../assets/icons/network-icon-light.png";
+var companyIconLightMode = "../../assets/icons/company-icon-light.png";
+var companyIconDarkMode = "../../assets/icons/company-icon-dark.png";
 
-var serviceIconLightMode = "../../assets/icons/service-icon-dark.png";
-var serviceIconDarkMode = "../../assets/icons/service-icon-light.png";
+var networkIconLightMode = "../../assets/icons/network-icon-light.png";
+var networkIconDarkMode = "../../assets/icons/network-icon-dark.png";
+
+var serviceIconLightMode = "../../assets/icons/service-icon-light.png";
+var serviceIconDarkMode = "../../assets/icons/service-icon-dark.png";
 
 function switchIcons() {
   document.getElementById("internetIcon").src = internetIconDarkMode;
@@ -80,7 +84,9 @@ function switchIcons() {
   let auxmobility = mobilityIconDarkMode;
   mobilityIconDarkMode = mobilityIconLightMode;
   mobilityIconLightMode = auxmobility;
+}
 
+function switchIcons2() {
   document.getElementById("chekListIcon").src = checkListIconDarkMode;
   let auxcheckList = checkListIconDarkMode;
   checkListIconDarkMode = checkListIconLightMode;
