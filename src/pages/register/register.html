@@ -26,41 +26,48 @@
         <div class="textfield">
           <label for="name">Nome</label>
           <input type="text" placeholder="Nome" id="name" name="nome" class="required" autocomplete="off" oninput="nameValidator()" />
-          <span class="span-required">Nome deve ter entre 15 e 60 caracteres alfabéticos.</span>
+          <span class="span-required">O nome deve ter entre 15 e 60 caracteres alfabéticos.</span>
         </div>
         <div class="textfield">
           <label for="birth">Data de Nascimento</label>
-          <input type="date" placeholder="Usuário" />
+          <input type="date" placeholder="Usuário" id="birth" name="birth" class="required" autocomplete="off" oninput="birthValidator()"/>
+          <span class="span-required">Este campo deve ser preenchido.</span>
         </div>
         <div class="textfield">
-          <label for="gender"><br />Sexo</label>
+          <label for="gender">Sexo</label>
           <div class="gender">
             <input type="radio" name="sex" id="sexm" /><label for="sexm">Masculino</label>
             <input type="radio" name="sex" id="sexf" /><label for="sexf">Feminino</label>
+            <input type="radio" name="sex" id="other" /><label for="other">Outro</label>
           </div>
         </div>
         <div class="textfield">
-          <label for="m-name"><br />Nome Materno</label>
-          <input type="text" placeholder="Nome Materno" autocomplete="off"/>
+          <label for="mName"><br>Nome Materno</label>
+          <input type="text" placeholder="Nome Materno" id="mName" name="mName" class="required" autocomplete="off" oninput="mNameValidator()"/>
+          <span class="span-required">O nome deve ter entre 15 e 60 caracteres alfabéticos.</span>
         </div>
         <div class="textfield">
-          <label for="cpf"><br />CPF</label>
-          <input type="text" placeholder="xxx.xxx.xxx-xx" autocomplete="off" maxlength="14" id="cpf" />
+          <label for="cpf">CPF</label>
+          <input type="text" placeholder="xxx.xxx.xxx-xx" maxlength="14" id="cpf" name="cpf" class="required" autocomplete="off" oninput="cpfValidator()"/>
+          <span class="span-required">Este campo deve ser preenchido.</span>
         </div>
         <div class="textfield">
-          <label for="c-number"><br />Numero de Celular</label>
-          <input type="tel" placeholder="(+55)xx-xxxxx-xxxx" maxlength="18" id="c-number" autocomplete="off"/>
+          <label for="c-number">Numero de Celular</label>
+          <input type="tel" placeholder="(+55)xx-xxxxx-xxxx" maxlength="18" id="c-number" name="c-number" class="required" autocomplete="off" oninput="cNumberValidator()"/>
+          <span class="span-required">Este campo deve ser preenchido.</span>
         </div>
         <div class="textfield">
-          <label for="t-number"><br />Numero de Telefone Fixo</label>
-          <input type="tel" placeholder="(+55)xx-xxxx-xxxx" maxlength="17" id="t-number" autocomplete="off"/>
+          <label for="t-number">Numero de Telefone Fixo</label>
+          <input type="tel" placeholder="(+55)xx-xxxx-xxxx" maxlength="17" id="t-number" name="t-number" class="required" autocomplete="off" oninput="tNumberValidator()"/>
+          <span class="span-required">Este campo deve ser preenchido.</span>
         </div>
         <div class="textfield">
-          <label for="address"><br />Endereço</label>
-          <input type="text" placeholder="Endereço" autocomplete="off"/>
+          <label for="address">Endereço</label>
+          <input type="text" placeholder="Endereço" id="address" name="address" class="required" autocomplete="off" oninput="addressValidator()"/>
+          <span class="span-required">Este campo deve ser preenchido.</span>
         </div>
         <div class="textfield">
-          <label for="user"><br />Usuário</label>
+          <label for="user">Usuário</label>
           <input type="text" placeholder="Usuário" class="required" id="username" oninput="userValidator()" autocomplete="off"/>
           <span class="span-required">Usuário deve ter 6 caracteres alfabéticos.</span>
         </div>
@@ -86,7 +93,6 @@
   </section>
 
   <div class="alert"></div>
-  <button id="btnTop" onclick="upToTop()"></button>
   
   <footer>
     <div class="dark-mode-footer">

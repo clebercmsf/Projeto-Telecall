@@ -8,6 +8,12 @@ const passwordRejex = /^[a-zA-Z]{8,}$/;
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   nameValidator();
+  birthValidator();
+  mNameValidator();
+  cpfValidator();
+  cNumberValidator();
+  tNumberValidator();
+  addressValidator();
   userValidator();
   passwordValidator();
   passwordConfirm();
@@ -31,27 +37,75 @@ function nameValidator() {
   }
 }
 
-function userValidator() {
-  if (!userRejex.test(field[1].value)) {
+function birthValidator() {
+  if (field[1].value === "") {
     setError(1);
   } else {
     removeError(1);
   }
 }
 
-function passwordValidator() {
-  if (!passwordRejex.test(field[2].value)) {
+function mNameValidator() {
+  if (field[2].value.length < 15 || field[2].value.length > 60) {
     setError(2);
   } else {
     removeError(2);
   }
 }
 
-function passwordConfirm() {
-  if (field[2].value != field[3].value || field[3].value == "") {
+function cpfValidator() {
+  if (field[3].value.length < 14) {
     setError(3);
   } else {
     removeError(3);
+  }
+}
+
+function cNumberValidator() {
+  if (field[4].value.length < 18) {
+    setError(4);
+  } else {
+    removeError(4);
+  }
+}
+
+function tNumberValidator() {
+  if (field[5].value.length < 17) {
+    setError(5);
+  } else {
+    removeError(5);
+  }
+}
+
+function addressValidator() {
+  if (field[6].value === "") {
+    setError(6);
+  } else {
+    removeError(6);
+  }
+}
+
+function userValidator() {
+  if (!userRejex.test(field[7].value)) {
+    setError(7);
+  } else {
+    removeError(7);
+  }
+}
+
+function passwordValidator() {
+  if (!passwordRejex.test(field[8].value)) {
+    setError(8);
+  } else {
+    removeError(8);
+  }
+}
+
+function passwordConfirm() {
+  if (field[8].value != field[9].value || field[9].value == "") {
+    setError(9);
+  } else {
+    removeError(9);
   }
 }
 
@@ -106,18 +160,18 @@ function setCookie(name, value) {
 }
 
 function userRegister() {
-  if(document.getElementById("name").value.length >= 15 && document.getElementById("name").value.length <= 60 && document.getElementById("username").value.length === 6 && document.getElementById("password").value.length >= 8) {
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
+  if (document.getElementById("name").value.length >= 15 && document.getElementById("name").value.length <= 60 && document.getElementById("username").value.length === 6 && document.getElementById("password").value.length >= 8) {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
 
-  setCookie("username", username);
-  setCookie("password", password);
+    setCookie("username", username);
+    setCookie("password", password);
 
-  activate(msgSuccess);
+    activate(msgSuccess);
 
-  setTimeout(function() {
-    window.location.href = '../login/login.html';
-  }, 2000);
+    setTimeout(function () {
+      window.location.href = '../login/login.html';
+    }, 2000);
   }
 }
 
@@ -137,22 +191,6 @@ function activate(msg) {
   }, 2000);
 }
 
-// up to top button
-window.onscroll = function () { showTopButton() };
-
-function showTopButton() {
-  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-    document.getElementById("btnTop").style.display = "block";
-  } else {
-    document.getElementById("btnTop").style.display = "none";
-  }
-}
-
-function upToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
 // dark-mode
 const chk = document.getElementById("chk")
 
@@ -166,8 +204,8 @@ var logoLight = "../../assets/img/telecall-logo4-light.png";
 var logoDark = "../../assets/img/telecall-logo4-dark.png";
 
 function switchLogo() {
-document.getElementById("logo").src = logoDark;
-let aux = logoDark;
-logoDark = logoLight;
-logoLight = aux;
+  document.getElementById("logo").src = logoDark;
+  let aux = logoDark;
+  logoDark = logoLight;
+  logoLight = aux;
 }

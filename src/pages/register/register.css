@@ -223,28 +223,6 @@ body {
   animation: slidein 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-#btnTop {
-  display: none;
-  position: fixed;
-  width: 65px;
-  height: 65px;
-  background-size: cover;
-  background-image: url("../../assets/img/telecall-logo4-light.png");
-  background-color: #082f4a;
-  box-shadow: 0 10px 40px #003b71;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 50px;
-  transition: all 0.3s;
-}
-
-#btnTop:hover {
-  transform: scale(1.1);
-}
-
 @keyframes slidein {
   0% {
     transform: translateX(1000px);
