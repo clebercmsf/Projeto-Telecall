@@ -20,8 +20,8 @@ const chk = document.getElementById("chk")
 chk.addEventListener("change", () => {
   document.body.classList.toggle("dark-mode");
   switchLogo();
-  switchIcons();
-  switchIcons2();
+  switchIconsCard();
+  switchIconsMobility();
 })
 
 
@@ -57,6 +57,9 @@ var mobilityIconDarkMode = "../../assets/icons/mobility-icon-dark.png";
 var smartphoneIconLightMode = "../../assets/icons/smartphone-icon-light.png";
 var smartphoneIconDarkMode = "../../assets/icons/smartphone-icon-dark.png";
 
+var checkListIconLightMode = "../../assets/icons/checkList-icon-light.png";
+var checkListIconDarkMode = "../../assets/icons/checkList-icon-dark.png";
+
 var smartphoneIconLightMode = "../../assets/icons/smartphone-icon-light.png";
 var smartphoneIconDarkMode = "../../assets/icons/smartphone-icon-dark.png";
 
@@ -69,7 +72,7 @@ var networkIconDarkMode = "../../assets/icons/network-icon-dark.png";
 var serviceIconLightMode = "../../assets/icons/service-icon-light.png";
 var serviceIconDarkMode = "../../assets/icons/service-icon-dark.png";
 
-function switchIcons() {
+function switchIconsCard() {
   document.getElementById("internetIcon").src = internetIconDarkMode;
   let auxinternet = internetIconDarkMode;
   internetIconDarkMode = internetIconLightMode;
@@ -86,7 +89,7 @@ function switchIcons() {
   mobilityIconLightMode = auxmobility;
 }
 
-function switchIcons2() {
+function switchIconsMobility() {
   document.getElementById("chekListIcon").src = checkListIconDarkMode;
   let auxcheckList = checkListIconDarkMode;
   checkListIconDarkMode = checkListIconLightMode;
