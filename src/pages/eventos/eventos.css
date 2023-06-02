@@ -1,0 +1,721 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+:root {
+  --color-neutral-0: #CA1C2A;
+  --color-neutral-1: #ffffff;
+  --color-neutral-2: #E0E0E0;
+  --color-neutral-3: #0E4E7C;
+  --color-neutral-4: #082F4A;
+  --color-neutral-5: #003b71;
+  --color-neutral-6: #5398C9;
+  --color-neutral-7: #95B9D2;
+  --color-neutral-8: #31353B;
+  --color-neutral-9: #87898d;
+  --color-neutral-10: #656565;
+  --color-neutral-11: #e6e6e6;
+
+  /* dark-mode */
+  --color-neutral-12: #4A0A10;
+  --color-neutral-13: #8a131d;
+  --color-neutral-14: #CA1C2A;
+  --color-neutral-15: #ffffff;
+  --color-neutral-16: #000000;
+  --color-neutral-17: #082F4A;
+  --color-neutral-18: #003b71;
+  --color-neutral-19: #5398C9;
+  --color-neutral-20: #95B9D2;
+  --color-neutral-21: #31353B;
+  --color-neutral-22: #87898d;
+  --color-neutral-23: #656565;
+  --color-neutral-24: #e6e6e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-image: url("../../assets/img/telecall-background-login-light.png");
+  background-size: cover;
+  transition: background 0.2s linear;
+}
+
+header {
+  display: flex;
+  box-shadow: 0 10px 40px var(--color-neutral-9);
+}
+
+.nav-bar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--color-neutral-0);
+}
+
+.logo {
+  width: 400px;
+  height: 80px;
+  margin: 0 100px 0 -50px;
+  background-color: var(--color-neutral-1);
+  clip-path: polygon(0 0, 100% 0, 81% 100%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 150px;
+  right: 60px;
+  transition: all 0.3s;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 0 0;
+  color: var(--color-neutral-1);
+  padding: 10px;
+}
+
+.menu li {
+  cursor: pointer;
+  margin-left: 30px;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: var(--color-neutral-1);
+  transition: all 0.5s;
+}
+
+.menu-link:hover {
+  text-decoration: underline var(--color-neutral-3);
+}
+
+.submenu {
+  display: none;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-btn button {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-neutral-3);
+  color: var(--color-neutral-1);
+  border-radius: 30px;
+  transition: all 0.7s;
+}
+
+.login-btn button:hover {
+  background-color: var(--color-neutral-5);
+}
+
+.login-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.login a:hover {
+  text-decoration: underline var(--color-neutral-4);
+  transition: all 0.2s;
+}
+
+.containerSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 100px 5px 150px 5px;
+}
+
+
+.containerSection h1 {
+  align-self: center;
+  color: var(--color-neutral-8);
+  text-shadow: -3px 2px 10px var(--color-neutral-9);
+  font-weight: 650;
+  font-size: 35px;
+  margin-bottom: 70px;
+  border-bottom: 3px solid var(--color-neutral-13);
+}
+
+.container-card {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 355px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 35px;
+  box-shadow: 0 10px 40px var(--color-neutral-9);
+  --bs-border-radius: 20px;
+  margin: 13px;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  color: var(--color-neutral-0);
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  color: var(--color-neutral-8);
+  font-weight: 600;
+}
+
+.card p {
+  text-align: justify;
+  font-size: 14px;
+  color: var(--color-neutral-8);
+}
+
+.container-card button {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-neutral-0);
+  color: var(--color-neutral-1);
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+
+.container-card button:hover {
+  background-color: var(--color-neutral-13);
+}
+
+.container-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container-content {
+  font-size: 20px;
+}
+
+.container-content img {
+  width: 500px;
+  height: 500px;
+}
+
+.container-content ul {
+  list-style-type: none;
+}
+
+.container li {
+  align-items: center;
+  margin-bottom: 25px;
+  color: var(--color-neutral-4);
+  font-size: 23px;
+  font-weight: 630;
+}
+
+.container-content li img {
+  width: 65px;
+  height: 65px;
+  margin-right: 20px;
+}
+
+.container-content p {
+  color: var(--color-neutral-4);
+  text-align: justify;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+#chip-title {
+  margin-bottom: 100px;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  color: var(--color-neutral-4);
+  box-shadow: 0 -10px 40px var(--color-neutral-9);
+}
+
+footer img {
+  width: 150px;
+  right: 60px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--color-neutral-4);
+  transition: all 0.4s;
+}
+
+.link:hover {
+  color: var(--color-neutral-5);
+  text-decoration: underline;
+}
+
+#footer_content {
+  background-color: var(--color-neutral-2);
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 3.5rem;
+}
+
+#footer_contacts img {
+  margin-bottom: 1rem;
+  transition: all 0.5s;
+}
+
+#footer_contacts img:hover {
+  transform: scale(1.1);
+}
+
+#footer_contacts p {
+  color: var(--color-neutral-4);
+  font-weight: 500;
+}
+
+#footer_social_media {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+#footer_social_media .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: var(--color-neutral-2);
+  border-radius: 50%;
+  transition: all 0.5s;
+
+}
+
+#footer_social_media>.link>i {
+  font-size: 1.25rem;
+}
+
+#footer_social_media>.link:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+
+#instagram {
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+  background: #4267b3;
+}
+
+#linkedin {
+  background: #0073B1;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.footer-list a {
+  font-weight: 500;
+}
+
+.footer-list h2 {
+  font-weight: 650;
+}
+
+#footer_subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#footer_subscribe p {
+  color: var(--color-neutral-4);
+}
+
+#input-group {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-neutral-4);
+  border-radius: 4px;
+}
+
+#input-group>input {
+  all: unset;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+#input_group>button {
+  background-color: var(--color-neutral-4);
+  border: none;
+  color: var(--color-neutral-6);
+  padding: 0px 1.25rem;
+  font-size: 1.125rem;
+  height: 100%;
+  border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#input_group>button:hover {
+  opacity: 0.8;
+}
+
+#footer_copyright {
+  display: flex;
+  justify-content: center;
+  color: var(--color-neutral-11);
+  background-color: var(--color-neutral-8);
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  font-weight: 100;
+}
+
+#btnTop {
+  display: none;
+  position: fixed;
+  width: 65px;
+  height: 65px;
+  background-size: cover;
+  background-image: url("../../assets/img/telecall-logo4-light.png");
+  background-color: var(--color-neutral-4);
+  box-shadow: 0 10px 40px var(--color-neutral-5);
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50px;
+  transition: all 0.3s;
+  animation: slidein 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+#btnTop:hover {
+  transform: scale(1.1);
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideoff {
+  100% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* darkmode button*/
+.dark-mode-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 25px auto 20px -12px;
+  position: static;
+  bottom: 0;
+}
+
+.dark-mode-button {
+  opacity: 0;
+  position: relative;
+
+}
+
+.dark-mode-label {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  transform: scale(1.5);
+}
+
+.dark-mode-label .ball {
+  background-color: #e6e6e6;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.dark-mode-button:checked + .dark-mode-label .ball {
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+/* darkmode */
+body.dark-mode {
+  background-image: url(../../assets/img/telecall-background-login-dark.png);
+}
+
+body.dark-mode header {
+  box-shadow: 0 20px 40px var(--color-neutral-13);
+}
+
+body.dark-mode .nav-bar {
+  background-color: var(--color-neutral-13);
+}
+
+body.dark-mode .logo {
+  background-color: var(--color-neutral-12);
+}
+
+body.dark-mode .menu {
+  color: var(--color-neutral-15);
+}
+
+body.dark-mode .menu-link {
+  color: var(--color-neutral-15);
+}
+
+body.dark-mode .menu-link:hover {
+  color: var(--color-neutral-14);
+  text-decoration: underline var(--color-neutral-14);
+  transition: all 0.4s;
+}
+
+body.dark-mode .login-btn button {
+  background-color: var(--color-neutral-12);
+  color: var(--color-neutral-15);
+}
+
+body.dark-mode .login-btn button:hover {
+  background-color: var(--color-neutral-14);
+}
+
+body.dark-mode .login a:hover {
+  text-decoration: underline var(--color-neutral-4);
+}
+
+body.dark-mode .containerSection h1 {
+  color: var(--color-neutral-15);
+  text-shadow: -3px 2px 10px var(--color-neutral-14);
+  border-bottom: 3px solid var(--color-neutral-12);
+}
+
+body.dark-mode .card {
+  box-shadow: 0 10px 40px var(--color-neutral-13);
+}
+
+body.dark-mode .card img {
+  color: var(--color-neutral-0);
+}
+
+body.dark-mode .card h2 {
+  color: var(--color-neutral-12);
+}
+
+body.dark-mode .card p {
+  color: var(--color-neutral-13);
+}
+
+body.dark-mode .container-card button {
+  background-color: var(--color-neutral-12);
+  color: var(--color-neutral-15);
+}
+
+body.dark-mode .container-card button:hover {
+  background-color: var(--color-neutral-13);
+}
+
+body.dark-mode .container li {
+  color: var(--color-neutral-15);
+}
+
+body.dark-mode .container-content p {
+  color: var(--color-neutral-15);
+}
+
+/* footer */
+body.dark-mode footer {
+  color: var(--color-neutral-15);
+  box-shadow: 0 -10px 40px var(--color-neutral-12);
+}
+
+body.dark-mode #footer_content {
+  background-color: var(--color-neutral-13);
+}
+
+body.dark-mode #footer_contacts p {
+  color: var(--color-neutral-15);
+}
+
+body.dark-mode #footer_social_media .link {
+  color: var(--color-neutral-2);
+}
+
+body.dark-mode #footer_social_media>.link:hover {
+  opacity: 1;
+  background-color: var(--color-neutral-14);
+}
+
+body.dark-mode #instagram {
+  background: var(--color-neutral-12);
+}
+
+body.dark-mode #facebook {
+  background: var(--color-neutral-12);
+}
+
+body.dark-mode #linkedin {
+  background: var(--color-neutral-12);
+}
+
+body.dark-mode .link {
+  color: var(--color-neutral-15);
+}
+
+body.dark-mode .link:hover {
+  color: var(--color-neutral-14);
+}
+
+body.dark-mode #footer_copyright {
+  color: var(--color-neutral-15);
+  background-color: var(--color-neutral-12);
+}
+
+body.dark-mode #btnTop {
+  background-image: url("../../assets/img/telecall-logo4-dark.png");
+  background-color: var(--color-neutral-12);
+  box-shadow: 0 0 40px var(--color-neutral-14);
+}
+
+/* subpage template */
+.containerHeader {
+  width: 100%;
+  height: 398px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../assets/img/telecall-eventosPage.png");
+  background-size: cover;
+  box-shadow: 0 10px 40px var(--color-neutral-9);
+}
+
+.containerHeader-content {
+  display: flex;
+  flex-direction: column;
+  margin: 70px 0 0 100px;
+  color: var(--color-neutral-8);
+}
+
+.containerHeader-content p {
+  font-weight: 550;
+  font-size: 25px;
+}
+
+.containerHeader-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.containerHeader-title img {
+  width: 100px;
+  height: 100px;
+}
+
+.containerHeader-content button {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-neutral-0);
+  color: var(--color-neutral-1);
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+
+.containerHeader-content button:hover {
+  background-color: var(--color-neutral-13);
+}
+
+body.dark-mode .containerHeader {
+  box-shadow: 0 10px 40px var(--color-neutral-13);
+}
+
+body.dark-mode .containerHeader-content {
+  color: var(--color-neutral-12);
+}
+
+body.dark-mode .containerHeader-content button {
+  background-color: var(--color-neutral-12);
+  color: var(--color-neutral-1);
+}
+
+body.dark-mode .containerHeader-content button:hover {
+  background-color: var(--color-neutral-13);
+}
