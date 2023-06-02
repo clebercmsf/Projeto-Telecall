@@ -14,6 +14,21 @@ function upToTop() {
   document.documentElement.scrollTop = 0;
 }
 
+// cellNumber input format;
+const cellInput = document.querySelector("#c-number");
+
+cellInput.addEventListener("keypress", () => {
+  let cellLength = cellInput.value.length;
+
+  if (cellLength === 0) {
+    cellInput.value += "(+55)";
+  } else if (cellLength === 7) {
+    cellInput.value += "-";
+  } else if (cellLength === 13) {
+    cellInput.value += "-";
+  }
+});
+
 // dark-mode
 const chk = document.getElementById("chk")
 
@@ -53,10 +68,10 @@ function internetDedicadaRedirect() {
   window.location.href = '../internetDedicada/internetDedicada.html';
 }
 
-function wifiRedirect() {
-  window.location.href = '../wifiRedirect/wifiRedirect.html';
+function bandaLargaRedirect() {
+  window.location.href = '../bandaLarga/bandaLarga.html';
 }
 
-function pabxRedirect() {
-  window.location.href = '../pabx/pabx.html';
+function wifiRedirect() {
+  window.location.href = '../wifiRedirect/wifiRedirect.html';
 }
