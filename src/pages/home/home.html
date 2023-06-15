@@ -52,12 +52,20 @@
       </ul>
 
       <div class="login-btn">
+        <div class="dark-mode-footer">
+          <input type="checkbox" class="dark-mode-button" id="chk" />
+          <label class="dark-mode-label" for="chk">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball"></div>
+          </label>
+        </div>
         <button onclick="window.location.href='../login/login.html'"><svg xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
             <path
               d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
               fill="#ffffff" />
-          </svg> Área do Cliente</button>
+          </svg>Login</button>
       </div>
     </nav>
   </header>
@@ -99,19 +107,19 @@
           <img src="../../assets/icons/internet-icon-light.png" alt="internet" id="internetIcon">
           <h2>Internet</h2>
           <p>Solução de internet em fibra óptica com alta performance, qualidade, velocidade e disponibilidade.</p>
-          <button>Saiba Mais</button>
+          <button onclick="internetRedirect()">Saiba Mais</button>
         </div>
         <div class="card">
           <img src="../../assets/icons/cpaas-icon-light.png" alt="cpaas" id="cpaasIcon">
           <h2>CPaaS</h2>
           <p>Solução de software de comunicação a qual desenvolvedores podem criar uma variedade de aplicativos.</p>
-          <button>Saiba Mais</button>
+          <button onclick="cpaasRedirect()">Saiba Mais</button>
         </div>
         <div class="card">
           <img src="../../assets/icons/mobility-icon-light.png" alt="mobilidade" id="mobilityIcon">
           <h2>Mobilidade</h2>
           <p>Monte planos de celular personalizados para a sua empresa e pague apenas pelo que precisa.</p>
-          <button>Saiba Mais</button>
+          <button onclick="mobilityRedirect()">Saiba Mais</button>
         </div>
       </div>
     </section>
@@ -187,11 +195,11 @@
         <li>
           <h2>PÁGINAS</h2>
           <ul>
-            <li><a href="#" class="link">Internet</a></li>
-            <li><a href="#" class="link">CpasS</a></li>
-            <li><a href="#" class="link">Mobilidade</a></li>
-            <li><a href="#" class="link">Eventos</a></li>
-            <li><a href="#" class="link">Contatos</a></li>
+            <li><a href="../internet/internet.html" class="link">Internet</a></li>
+            <li><a href="../cpaas/cpaas.html" class="link">CpasS</a></li>
+            <li><a href="../mobilidade/mobilidade.html" class="link">Mobilidade</a></li>
+            <li><a href="../eventos/eventos.html" class="link">Eventos</a></li>
+            <li><a href="../contatos/contatos.html" class="link">Contatos</a></li>
           </ul>
         </li>
       </ul>

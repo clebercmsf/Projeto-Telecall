@@ -24,6 +24,19 @@ chk.addEventListener("change", () => {
   switchIconsMobility();
 })
 
+// redirecting
+function internetRedirect() {
+  window.location.href = '../internet/internet.html';
+}
+
+function cpaasRedirect() {
+  window.location.href = '../cpaas/cpaas.html';
+}
+
+function mobilityRedirect() {
+  window.location.href = '../mobilidade/mobilidade.html';
+}
+
 
 // switchLogo
 var logoLightHeader = "../../assets/img/telecall-logo6-light.png";
