@@ -215,6 +215,11 @@ header {
   background-color: var(--color-neutral-13);
 }
 
+#linkCardButton {
+  text-decoration: none;
+  color: var(--color-neutral-1);
+}
+
 .container-group {
   display: flex;
   justify-content: center;

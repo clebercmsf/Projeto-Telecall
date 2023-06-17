@@ -48,11 +48,3 @@ function switchLogo() {
 function contactRedirect() {
   window.location.href = '../contatos/contatos.html';
 }
-
-function celularEmpresarialRedirect() {
-  window.location.href = '../celularEmpresarial/celularEmpresarial.html';
-}
-
-function mvnaRedirect() {
-  window.location.href = '../mvna/mvna.html';
-}

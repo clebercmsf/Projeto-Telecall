@@ -48,3 +48,15 @@ function switchLogo() {
 function contactRedirect() {
   window.location.href = '../contatos/contatos.html';
 }
+
+function internetDedicadaRedirect() {
+  window.location.href = '../internetDedicada/internetDedicada.html';
+}
+
+function wifiRedirect() {
+  window.location.href = '../wifiRedirect/wifiRedirect.html';
+}
+
+function pabxRedirect() {
+  window.location.href = '../pabx/pabx.html';
+}
