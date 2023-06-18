@@ -60,3 +60,12 @@ function wifiRedirect() {
 function pabxRedirect() {
   window.location.href = '../pabx/pabx.html';
 }
+
+/*responsive button nav*/
+const hamburguer = document.querySelector('.hamburguer');
+const menu = document.querySelector('.menu');
+
+hamburguer.addEventListener('click', () => {
+  hamburguer.classList.toggle('active');
+  menu.classList.toggle('active');
+});

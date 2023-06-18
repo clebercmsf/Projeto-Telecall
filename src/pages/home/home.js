@@ -128,3 +128,14 @@ function switchIconsMobility() {
   serviceIconDarkMode = serviceIconLightMode;
   serviceIconLightMode = auxservice;
 }
+
+/*responsive button nav*/
+const hamburguer = document.querySelector('.hamburguer');
+const menu = document.querySelector('.menu');
+const carrossel = document.querySelector('.carouselSection');
+
+hamburguer.addEventListener('click', () => {
+  hamburguer.classList.toggle('active');
+  menu.classList.toggle('active');
+  carrossel.remove();     
+});
