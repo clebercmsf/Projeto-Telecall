@@ -37,6 +37,10 @@ function mobilityRedirect() {
   window.location.href = '../mobilidade/mobilidade.html';
 }
 
+function modelosRedirect() {
+  window.location.href = '../modelos-er/modelos-er.html';
+}
+
 
 // switchLogo
 var logoLightHeader = "../../assets/img/telecall-logo6-light.png";
@@ -66,6 +70,9 @@ var cpaasIconDarkMode = "../../assets/icons/cpaas-icon-dark.png";
 
 var mobilityIconLightMode = "../../assets/icons/mobility-icon-light.png";
 var mobilityIconDarkMode = "../../assets/icons/mobility-icon-dark.png";
+
+var modeloIconLightMode = "../../assets/icons/cpaas-icon-light.png";
+var modeloIconDarkMode = "../../assets/icons/cpaas-icon-dark.png";
 
 var smartphoneIconLightMode = "../../assets/icons/smartphone-icon-light.png";
 var smartphoneIconDarkMode = "../../assets/icons/smartphone-icon-dark.png";
@@ -100,6 +107,11 @@ function switchIconsCard() {
   let auxmobility = mobilityIconDarkMode;
   mobilityIconDarkMode = mobilityIconLightMode;
   mobilityIconLightMode = auxmobility;
+
+  document.getElementById("modeloIcon").src = modeloIconDarkMode;
+  let auxmodelo = modeloIconDarkMode;
+  modeloIconDarkMode = modeloIconLightMode;
+  modeloIconLightMode = auxmodelo;
 }
 
 function switchIconsMobility() {

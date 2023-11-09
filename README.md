@@ -1,12 +1,12 @@
 # Projeto-Telecall
 
 ## Resumo
-Este é o meu projeto do módulo de Front-End do curso de Graduação em Análise e Desenvolvimento de Sistemas na Universidade UNISUAM.  
+Este é o meu projeto do módulo de Front e Back END do curso de Graduação em Análise e Desenvolvimento de Sistemas na Universidade UNISUAM.  
 A [Telecall](https://www.telecall.com/) é uma Empresa de Telefonia e Telecomunicações que oferece um amplo conjunto de serviços, como Internet Dedicada, Banda Larga e Wi-fi.  
 Recentemente, a empresa fez um estudo de viabilidade para divulgação de seus produtos e serviços e identificou a necessidade de construir um site, chamado CPaaS (Communications Platform as a Service).
 
 ## Objetivo
-Neste projeto, o aluno tem a oportunidade de elaborar um site (apenas Front-End), com um conjunto de páginas interconectadas de modo a trazer várias informações desejadas pela empresa.  
+Neste projeto, o aluno tem a oportunidade de elaborar um site, com um conjunto de páginas interconectadas de modo a trazer várias informações desejadas pela empresa.  
 O site deve ter as seguintes funcionalidades principais:
 * Tela de Cadastro de um Novo Usuário;
 * Tela de Login;
