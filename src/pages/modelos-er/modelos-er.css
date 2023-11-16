@@ -835,7 +835,7 @@ body.dark-mode #btnTop {
   height: 398px;
   display: flex;
   flex-direction: column;
-
+  background-image: url("../../assets/img/telecall-cpaasPage.jpg");
   background-size: cover;
   box-shadow: 0 10px 40px var(--color-neutral-9);
 }
