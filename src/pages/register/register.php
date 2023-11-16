@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cadastro - Telecall</title>
   <link rel="stylesheet" href="./register.css" />
+  <script src="../../models/jquery.js"></script>
   <link rel="icon" href="../../assets/img/telecall-logo4-light.png" />
 </head>
 
@@ -22,7 +23,7 @@
   <section class="register">
     <section class="card-register">
       <h1>CADASTRO</h1>
-      <form id="form">
+      <form method="POST" id="form">
         <div class="textfield">
           <label for="name">Nome</label>
           <input type="text" placeholder="Nome" id="name" name="nome" class="required" autocomplete="off" oninput="nameValidator()" />
@@ -36,9 +37,9 @@
         <div class="textfield">
           <label for="gender">Sexo</label>
           <div class="gender">
-            <input type="radio" name="sex" id="sexm" /><label for="sexm">Masculino</label>
-            <input type="radio" name="sex" id="sexf" /><label for="sexf">Feminino</label>
-            <input type="radio" name="sex" id="other" /><label for="other">Outro</label>
+            <input type="radio" name="gender" id="sexm" /><label for="sexm">Masculino</label>
+            <input type="radio" name="gender" id="sexf" /><label for="sexf">Feminino</label>
+            <input type="radio" name="gender" id="other" /><label for="other">Outro</label>
           </div>
         </div>
         <div class="textfield">
@@ -53,12 +54,12 @@
         </div>
         <div class="textfield">
           <label for="c-number">Numero de Celular</label>
-          <input type="tel" placeholder="(+55)xx-xxxxx-xxxx" maxlength="18" id="c-number" name="c-number" class="required" autocomplete="off" oninput="cNumberValidator()"/>
+          <input type="tel" placeholder="(+55)xx-xxxxx-xxxx" maxlength="18" id="c-number" name="cNumber" class="required" autocomplete="off" oninput="cNumberValidator()"/>
           <span class="span-required">Este campo deve ser preenchido.</span>
         </div>
         <div class="textfield">
           <label for="t-number">Numero de Telefone Fixo</label>
-          <input type="tel" placeholder="(+55)xx-xxxx-xxxx" maxlength="17" id="t-number" name="t-number" class="required" autocomplete="off" oninput="tNumberValidator()"/>
+          <input type="tel" placeholder="(+55)xx-xxxx-xxxx" maxlength="17" id="t-number" name="tNumber" class="required" autocomplete="off" oninput="tNumberValidator()"/>
           <span class="span-required">Este campo deve ser preenchido.</span>
         </div>
         <div class="textfield">
@@ -68,7 +69,7 @@
         </div>
         <div class="textfield">
           <label for="user">Usuário</label>
-          <input type="text" placeholder="Usuário" class="required" id="username" oninput="userValidator()" autocomplete="off"/>
+          <input type="text" placeholder="Usuário" class="required" id="username" name="username" oninput="userValidator()" autocomplete="off"/>
           <span class="span-required">Usuário deve ter 6 caracteres alfabéticos.</span>
         </div>
         <div class="textfield">
@@ -78,12 +79,12 @@
         </div>
         <div class="textfield">
           <label for="conf-password">Confirme a Senha</label>
-          <input type="password" placeholder="Confirme a Senha" class="required" id="password" oninput="passwordConfirm()" autocomplete="off"/>
+          <input type="password" placeholder="Confirme a Senha" class="required" id="password" name="password" oninput="passwordConfirm()" autocomplete="off"/>
           <span class="span-required">Senhas não conferem.</span>
         </div>
         <div class="login">
           <label>Já possui uma conta?
-            <a href="../login/login.html">Entre aqui.</a></label>
+            <a href="../login/login.php">Entre aqui.</a></label>
         </div>
         <div>
           <input type="submit" class="btn-register" value="enviar" onclick="userRegister()">

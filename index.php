@@ -11,7 +11,7 @@
 </body>
 
 <script>
-  window.location.href = "./src/pages/login/login.html";
+  window.location.href = "./src/pages/login/login.php";
 </script>
 
 </html>

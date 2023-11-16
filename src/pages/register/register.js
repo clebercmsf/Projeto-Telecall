@@ -153,24 +153,33 @@ tellInput.addEventListener("keypress", () => {
 });
 
 // register
-function setCookie(name, value) {
-  var now = new Date();
-  var expires = new Date(now.getTime() + (30 * 24 * 60 * 60 * 1000));
-  document.cookie = name + "=" + value + ";expires=" + expires.toUTCString() + ";path=/";
-}
-
 function userRegister() {
   if (document.getElementById("name").value.length >= 15 && document.getElementById("name").value.length <= 60 && document.getElementById("username").value.length === 6 && document.getElementById("password").value.length >= 8) {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+    // jquery | ajax
+    var nome = $('#name').val();
+    var birth = $('#birth').val();
+    var gender = $('#gender').val();
+    var mName = $('#mName').val();
+    var cpf = $('#cpf').val();
+    var cNumber = $('#cNumber').val();
+    var tNumber = $('#tNumber').val();
+    var address = $('#address').val();
+    var username = $('#username').val();
+    var password = $('#password').val();
 
-    setCookie("username", username);
-    setCookie("password", password);
+    $.ajax({
+      url:'../../models/send.php',
+      method: 'POST',
+      data: { nome: nome, birth: birth, gender: gender, mName: mName, cpf: cpf, cNumber: cNumber, tNumber: tNumber, address: address, username: username, password: password },
+      success: function() {
+        $('form').trigger("reset");
+      }
+    });
 
     activate(msgSuccess);
 
-    setTimeout(function () {
-      window.location.href = '../login/login.html';
+    setTimeout(() => {
+      window.location.href = '../login/login.php';
     }, 2000);
   }
 }

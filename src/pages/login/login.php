@@ -32,7 +32,7 @@
         <input type="password" placeholder="Senha" id="password" autocomplete="off">
       </div>
       <div class="register">
-        <label><br>Ainda não possui uma conta? <a href="../register/register.html">Crie aqui.</a></label>
+        <label><br>Ainda não possui uma conta? <a href="../register/register.php">Crie aqui.</a></label>
       </div>
       <div class="btn-login-submit">
         <input type="submit" class="btn-login" value="enviar" onclick="event.preventDefault(); loginValidate();">
