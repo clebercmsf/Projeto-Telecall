@@ -37,9 +37,9 @@
         <div class="textfield">
           <label for="gender">Sexo</label>
           <div class="gender">
-            <input type="radio" name="gender" id="sexm" /><label for="sexm">Masculino</label>
-            <input type="radio" name="gender" id="sexf" /><label for="sexf">Feminino</label>
-            <input type="radio" name="gender" id="other" /><label for="other">Outro</label>
+            <input type="radio" name="gender" id="sexm" value="M"/><label for="sexm">Masculino</label>
+            <input type="radio" name="gender" id="sexf" value="F"/><label for="sexf">Feminino</label>
+            <input type="radio" name="gender" id="other" value="O"/><label for="other">Outro</label>
           </div>
         </div>
         <div class="textfield">
@@ -53,13 +53,13 @@
           <span class="span-required">Este campo deve ser preenchido.</span>
         </div>
         <div class="textfield">
-          <label for="c-number">Numero de Celular</label>
-          <input type="tel" placeholder="(+55)xx-xxxxx-xxxx" maxlength="18" id="c-number" name="cNumber" class="required" autocomplete="off" oninput="cNumberValidator()"/>
+          <label for="cNumber">Numero de Celular</label>
+          <input type="tel" placeholder="(+55)xx-xxxxx-xxxx" maxlength="18" id="cNumber" name="cNumber" class="required" autocomplete="off" oninput="cNumberValidator()"/>
           <span class="span-required">Este campo deve ser preenchido.</span>
         </div>
         <div class="textfield">
-          <label for="t-number">Numero de Telefone Fixo</label>
-          <input type="tel" placeholder="(+55)xx-xxxx-xxxx" maxlength="17" id="t-number" name="tNumber" class="required" autocomplete="off" oninput="tNumberValidator()"/>
+          <label for="tNumber">Numero de Telefone Fixo</label>
+          <input type="tel" placeholder="(+55)xx-xxxx-xxxx" maxlength="17" id="tNumber" name="tNumber" class="required" autocomplete="off" oninput="tNumberValidator()"/>
           <span class="span-required">Este campo deve ser preenchido.</span>
         </div>
         <div class="textfield">

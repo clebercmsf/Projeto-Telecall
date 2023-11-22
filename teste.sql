@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema db_telecall
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema db_telecall
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `db_telecall` DEFAULT CHARACTER SET utf8 ;
+USE `db_telecall` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`Perfil`
+-- Table `db_telecall`.`Perfil`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Perfil` (
+CREATE TABLE IF NOT EXISTS `db_telecall`.`Perfil` (
   `id_Perfil` INT NOT NULL,
   `Descricao_Perfil` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`id_Perfil`))
@@ -28,9 +28,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Usuario`
+-- Table `db_telecall`.`Usuario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Usuario` (
+CREATE TABLE IF NOT EXISTS `db_telecall`.`Usuario` (
   `id_Usuario` INT NOT NULL AUTO_INCREMENT,
   `Nome_Usuario` VARCHAR(60) NOT NULL,
   `Nascimento_Usuario` VARCHAR(10) NOT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Usuario` (
   PRIMARY KEY (`id_Usuario`),
   CONSTRAINT `fk_Usuario_Telecall_perfis`
     FOREIGN KEY (`perfil`)
-    REFERENCES `mydb`.`Perfil` (`id_Perfil`)
+    REFERENCES `db_telecall`.`Perfil` (`id_Perfil`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

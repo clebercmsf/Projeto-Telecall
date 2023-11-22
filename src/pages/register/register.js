@@ -123,7 +123,7 @@ cpfInput.addEventListener("keypress", () => {
 });
 
 // cellNumber input format;
-const cellInput = document.querySelector("#c-number");
+const cellInput = document.querySelector("#cNumber");
 
 cellInput.addEventListener("keypress", () => {
   let cellLength = cellInput.value.length;
@@ -138,7 +138,7 @@ cellInput.addEventListener("keypress", () => {
 });
 
 // tellNumber input format;
-const tellInput = document.querySelector("#t-number");
+const tellInput = document.querySelector("#tNumber");
 
 tellInput.addEventListener("keypress", () => {
   let tellLength = tellInput.value.length;
@@ -158,7 +158,8 @@ function userRegister() {
     // jquery | ajax
     var nome = $('#name').val();
     var birth = $('#birth').val();
-    var gender = $('#gender').val();
+    // var gender = $('.gender').val();
+    var gender = "Masculino";
     var mName = $('#mName').val();
     var cpf = $('#cpf').val();
     var cNumber = $('#cNumber').val();
@@ -168,19 +169,20 @@ function userRegister() {
     var password = $('#password').val();
 
     $.ajax({
-      url:'../../models/send.php',
+      url: 'send.php',
       method: 'POST',
       data: { nome: nome, birth: birth, gender: gender, mName: mName, cpf: cpf, cNumber: cNumber, tNumber: tNumber, address: address, username: username, password: password },
-      success: function() {
+      success: function () {
+        // alert(data);
         $('form').trigger("reset");
       }
     });
 
     activate(msgSuccess);
 
-    setTimeout(() => {
-      window.location.href = '../login/login.php';
-    }, 2000);
+    // setTimeout(() => {
+    //   window.location.href = '../login/login.php';
+    // }, 2000);
   }
 }
 
