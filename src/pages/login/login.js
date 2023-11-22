@@ -23,9 +23,9 @@ function loginValidate() {
   if (username === userRegistered && password === passwordRegistered) {
     activate(msgSuccess);
 
-    setTimeout(function() {
-      window.location.href = '../home/home.php';
-    }, 2000);
+    // setTimeout(function() {
+    //   window.location.href = '../home/home.php';
+    // }, 2000);
   } else {
     activate(msgError);
   }
