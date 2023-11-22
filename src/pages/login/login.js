@@ -12,21 +12,31 @@ function getCookie(name) {
 
 function loginValidate() {
   // jquery | ajax
-  var username = $('#username').val();
-  var password = $('#password').val();
+  var nullUsername = document.getElementById("username").value;
+  var nullPassword = document.getElementById("password").value;
 
-  $.ajax({
-    url: 'send.php',
-    method: 'POST',
-    data: { username: username, password: password },
-    success: function () {
-      activate(msgSuccess);
+  if (nullUsername != "" && nullPassword != "") {
+    var username = $('#username').val();
+    var password = $('#password').val();
 
-      setTimeout(function() {
-        window.location.href = '../home/home.php';
-      }, 2000);
-    }
-  });
+    $.ajax({
+      url: 'send.php',
+      method: 'POST',
+      data: { username: username, password: password },
+      success: () => {
+        activate(msgSuccess);
+  
+        setTimeout(function() {
+          window.location.href = '../home/home.php';
+        }, 2000);
+      },
+      error: () => {
+        activate(msgError);
+      }
+    });
+  } else {
+    activate(msgError);
+  }
 
   // ================================================================================================
 
