@@ -23,42 +23,29 @@ function loginValidate() {
       url: 'send.php',
       method: 'POST',
       data: { username: username, password: password },
-      success: () => {
-        activate(msgSuccess);
-  
-        setTimeout(function() {
-          window.location.href = '../home/home.php';
-        }, 2000);
+      success: function (response) {
+        if (response === 'Login bem-sucedido!') {
+          // Sucesso - ativa a mensagem de sucesso
+          activate(msgSuccess);
+
+          // Redireciona para a página de home após 2 segundos
+          setTimeout(function () {
+            window.location.href = '../home/home.php';
+          }, 2000);
+        } else {
+          // Falha no login - ativa a mensagem de erro
+          activate(msgError);
+        }
       },
-      error: () => {
+      error: function () {
+        // Erro na requisição AJAX - ativa a mensagem de erro
         activate(msgError);
       }
     });
+
   } else {
     activate(msgError);
   }
-
-  // ================================================================================================
-
-
-  // var username = document.getElementById("username").value;
-  // var password = document.getElementById("password").value;
-
-  // console.log("Usuário: " + username);
-  // console.log("password: " + password);
-
-  // var userRegistered = getCookie("username");
-  // var passwordRegistered = getCookie("password");
-
-  // if (username === userRegistered && password === passwordRegistered) {
-  //   activate(msgSuccess);
-
-  //   setTimeout(function() {
-  //     window.location.href = '../home/home.php';
-  //   }, 2000);
-  // } else {
-  //   activate(msgError);
-  // }
 }
 
 // alert
@@ -69,12 +56,12 @@ const msgError = "Usuário ou Senha inválidos!";
 
 function activate(msg) {
   const message = document.createElement("div");
-  if(msg === msgSuccess) {
+  if (msg === msgSuccess) {
     message.classList.add("messageSuccess");
   } else {
     message.classList.add("messageError");
   }
-  
+
   message.innerText = msg;
   divMessage.appendChild(message);
 
@@ -96,8 +83,8 @@ var logoLight = "../../assets/img/telecall-logo4-light.png";
 var logoDark = "../../assets/img/telecall-logo4-dark.png";
 
 function switchLogo() {
-document.getElementById("logo").src = logoDark;
-let aux = logoDark;
-logoDark = logoLight;
-logoLight = aux;
+  document.getElementById("logo").src = logoDark;
+  let aux = logoDark;
+  logoDark = logoLight;
+  logoLight = aux;
 }

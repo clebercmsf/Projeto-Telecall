@@ -1,16 +1,24 @@
 <?php
-  $connect = new PDO("mysql:host=localhost;dbname=db_telecall", "root", "");
+try {
+    $connect = new PDO("mysql:host=localhost;dbname=db_telecall", "root", "");
 
-  $username = $_POST["username"];
-  $password = $_POST["password"];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-  $sql = "SELECT * FROM usuario WHERE Login_Usuario = '$username' and Senha_Usuario = '$password'";
+    $sql = "SELECT * FROM usuario WHERE Login_Usuario = :username AND Senha_Usuario = :pasword";
+    $stmt = $connect->prepare($sql);
+    $stmt->bindParam(':username', $username);
+    $stmt->bindParam(':pasword', $password);
+    $stmt->execute();
 
-  $result = $connect->query($sql);
+    $rowCount = $stmt->rowCount();
 
-  if ($result->PDO::rowCount > 0) {
-    echo "Login bem-sucedido!";
-} else {
-    echo "Usuário ou senha incorretos.";
+    if ($rowCount > 0) {
+        echo "Login bem-sucedido!";
+    } else {
+        echo "Usuário ou senha incorretos.";
+    }
+} catch (PDOException $e) {
+    echo "Erro na conexão com o banco de dados: " . $e->getMessage();
 }
 ?>
