@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Telecall</title>
   <link rel="stylesheet" href="./login.css">
+  <script src="../../models/jquery.js"></script>
   <link rel="icon" href="../../assets/img/telecall-logo4-light.png" />
 </head>
 

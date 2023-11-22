@@ -12,15 +12,12 @@ function getCookie(name) {
 
 function loginValidate() {
   // jquery | ajax
-  var nullUsername = document.getElementById("username").value;
-  var nullPassword = document.getElementById("password").value;
+  var username = $('#username').val();
+  var password = $('#password').val();
 
-  if (nullUsername != "" && nullPassword != "") {
-    var username = $('#username').val();
-    var password = $('#password').val();
-
+  if (username != "" && password != "") {
     $.ajax({
-      url: 'send.php',
+      url: 'validator.php',
       method: 'POST',
       data: { username: username, password: password },
       success: function (response) {
