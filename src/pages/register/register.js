@@ -172,11 +172,9 @@ function userRegister() {
       method: 'POST',
       data: { nome: nome, birth: birth, gender: gender, mName: mName, cpf: cpf, cNumber: cNumber, tNumber: tNumber, address: address, username: username, password: password },
       success: function () {
-        $('form').trigger("reset");
+        activate(msgSuccess);
       }
     });
-
-    activate(msgSuccess);
 
     setTimeout(() => {
       window.location.href = '../login/login.php';
