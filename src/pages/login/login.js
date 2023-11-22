@@ -24,21 +24,17 @@ function loginValidate() {
       method: 'POST',
       data: { username: username, password: password },
       success: function (response) {
-        if (response === 'Login bem-sucedido!') {
-          // Sucesso - ativa a mensagem de sucesso
+        if (response === 'success') {
           activate(msgSuccess);
 
-          // Redireciona para a página de home após 2 segundos
           setTimeout(function () {
             window.location.href = '../home/home.php';
           }, 2000);
         } else {
-          // Falha no login - ativa a mensagem de erro
           activate(msgError);
         }
       },
       error: function () {
-        // Erro na requisição AJAX - ativa a mensagem de erro
         activate(msgError);
       }
     });

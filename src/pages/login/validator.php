@@ -14,9 +14,9 @@ try {
     $rowCount = $stmt->rowCount();
 
     if ($rowCount > 0) {
-        echo "Login bem-sucedido!";
+        echo "success";
     } else {
-        echo "Usuário ou senha incorretos.";
+        echo "failure";
     }
 } catch (PDOException $e) {
     echo "Erro na conexão com o banco de dados: " . $e->getMessage();
