@@ -93,7 +93,7 @@
         <img src="../../assets/img/modelosEr-page/modelo-conceitual.png" alt="modelo-conceitual" id="panel">
         <img src="../../assets/img/modelosEr-page/modelo-logico-telecall.png" alt="modelo-logico" id="panel">
         <img src="../../assets/img/modelosEr-page/modelo-fisico-telecall.png" alt="modelo-fisico" id="panel">
-        <a href="../../assets/img/modelosEr-page/modelo-er-telecall.sql" target="_blank" rel="noopener noreferrer">Baixe o modelo físico aqui.</a>
+        <a href="../../assets/documents/modelo-er-telecall.sql" target="_blank" rel="noopener noreferrer">Baixe o modelo físico aqui.</a>
       </div>
   </section>
 
