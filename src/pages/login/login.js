@@ -11,24 +11,44 @@ function getCookie(name) {
 }
 
 function loginValidate() {
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
+  // jquery | ajax
+  var username = $('#username').val();
+  var password = $('#password').val();
 
-  console.log("Usuário: " + username);
-  console.log("password: " + password);
+  $.ajax({
+    url: 'send.php',
+    method: 'POST',
+    data: { username: username, password: password },
+    success: function () {
+      activate(msgSuccess);
 
-  var userRegistered = getCookie("username");
-  var passwordRegistered = getCookie("password");
+      setTimeout(function() {
+        window.location.href = '../home/home.php';
+      }, 2000);
+    }
+  });
 
-  if (username === userRegistered && password === passwordRegistered) {
-    activate(msgSuccess);
+  // ================================================================================================
 
-    // setTimeout(function() {
-    //   window.location.href = '../home/home.php';
-    // }, 2000);
-  } else {
-    activate(msgError);
-  }
+
+  // var username = document.getElementById("username").value;
+  // var password = document.getElementById("password").value;
+
+  // console.log("Usuário: " + username);
+  // console.log("password: " + password);
+
+  // var userRegistered = getCookie("username");
+  // var passwordRegistered = getCookie("password");
+
+  // if (username === userRegistered && password === passwordRegistered) {
+  //   activate(msgSuccess);
+
+  //   setTimeout(function() {
+  //     window.location.href = '../home/home.php';
+  //   }, 2000);
+  // } else {
+  //   activate(msgError);
+  // }
 }
 
 // alert
