@@ -37,9 +37,9 @@
         <div class="textfield">
           <label for="gender">Sexo</label>
           <div class="gender">
-            <input type="radio" name="gender" id="sexm" value="M"/><label for="sexm">Masculino</label>
-            <input type="radio" name="gender" id="sexf" value="F"/><label for="sexf">Feminino</label>
-            <input type="radio" name="gender" id="other" value="O"/><label for="other">Outro</label>
+            <input type="radio" name="gender" id="sexm" value="Masculino"/><label for="sexm">Masculino</label>
+            <input type="radio" name="gender" id="sexf" value="Feminino"/><label for="sexf">Feminino</label>
+            <input type="radio" name="gender" id="other" value="Outro"/><label for="other">Outro</label>
           </div>
         </div>
         <div class="textfield">

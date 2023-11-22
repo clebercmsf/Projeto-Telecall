@@ -158,8 +158,7 @@ function userRegister() {
     // jquery | ajax
     var nome = $('#name').val();
     var birth = $('#birth').val();
-    // var gender = $('.gender').val();
-    var gender = "Masculino";
+    var gender = $('input[name="gender"]:checked').val();
     var mName = $('#mName').val();
     var cpf = $('#cpf').val();
     var cNumber = $('#cNumber').val();
@@ -169,7 +168,7 @@ function userRegister() {
     var password = $('#password').val();
 
     $.ajax({
-      url: '../../models/send.php',
+      url: 'send.php',
       method: 'POST',
       data: { nome: nome, birth: birth, gender: gender, mName: mName, cpf: cpf, cNumber: cNumber, tNumber: tNumber, address: address, username: username, password: password },
       success: function () {
