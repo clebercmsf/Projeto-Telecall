@@ -46,7 +46,7 @@ function switchLogo() {
 
 // redirecting
 function contactRedirect() {
-  window.location.href = '../contatos/contatos.html';
+  window.location.href = '../contatos/contatos.php';
 }
 
 /*responsive button nav*/

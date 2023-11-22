@@ -26,19 +26,19 @@ chk.addEventListener("change", () => {
 
 // redirecting
 function internetRedirect() {
-  window.location.href = '../internet/internet.html';
+  window.location.href = '../internet/internet.php';
 }
 
 function cpaasRedirect() {
-  window.location.href = '../cpaas/cpaas.html';
+  window.location.href = '../cpaas/cpaas.php';
 }
 
 function mobilityRedirect() {
-  window.location.href = '../mobilidade/mobilidade.html';
+  window.location.href = '../mobilidade/mobilidade.php';
 }
 
 function modelosRedirect() {
-  window.location.href = '../modelos-er/modelos-er.html';
+  window.location.href = '../modelos-er/modelos-er.php';
 }
 
 

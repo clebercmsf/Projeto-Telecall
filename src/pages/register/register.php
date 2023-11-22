@@ -14,7 +14,7 @@
 <body>
   <header>
     <nav class="header">
-        <a class="header" href="../home/home.html">
+        <a class="header" href="../home/home.php">
             <img src="../../assets/img/telecall-logo4-light.png" alt="telecall-logo" id="logo">
         </a>
     </nav>

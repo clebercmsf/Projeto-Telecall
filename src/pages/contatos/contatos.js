@@ -61,19 +61,19 @@ function switchLogo() {
 
 // redirecting
 function contactRedirect() {
-  window.location.href = '../contatos/contatos.html';
+  window.location.href = '../contatos/contatos.php';
 }
 
 function internetDedicadaRedirect() {
-  window.location.href = '../internetDedicada/internetDedicada.html';
+  window.location.href = '../internetDedicada/internetDedicada.php';
 }
 
 function bandaLargaRedirect() {
-  window.location.href = '../bandaLarga/bandaLarga.html';
+  window.location.href = '../bandaLarga/bandaLarga.php';
 }
 
 function wifiRedirect() {
-  window.location.href = '../wifiRedirect/wifiRedirect.html';
+  window.location.href = '../wifiRedirect/wifiRedirect.php';
 }
 
 /*responsive button nav*/

@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contatos - Telecall</title>
-  <link rel="stylesheet" href="./contatos.css">
+  <title>Eventos - Telecall</title>
+  <link rel="stylesheet" href="./numeroMascara.css">
   <link rel="icon" href="../../assets/img/telecall-logo4-light.png" />
   <script src="https://kit.fontawesome.com/71235f940f.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,14 +17,14 @@
   <header>
     <nav class="nav-bar">
       <div class="logo">
-        <a href="../home/home.html">
+        <a href="../home/home.php">
           <img src="../../assets/img/telecall-logo6-light.png" alt="telecall-logo" id="logo-header">
         </a>
       </div>
 
       <ul class="menu">
         <li class="menu-link">
-          <a href="../internet/internet.html" class="menu-link">Internet</a>
+          <a href="../internet/internet.php" class="menu-link">Internet</a>
           <ul class="submenu">
             <li><a href="#" class="submenu-link">Internet Dedicada</a></li>
             <li><a href="#" class="submenu-link">Banda Larga</a></li>
@@ -32,23 +32,23 @@
           </ul>
         </li>
         <li class="menu-link">
-          <a href="../cpaas/cpaas.html" class="menu-link">CPaaS</a>
+          <a href="../cpaas/cpaas.php" class="menu-link">CPaaS</a>
           <ul class="submenu">
-            <li><a href="../2fa/2fa.html" class="submenu-link">2FA</a></li>
-            <li><a href="../numeroMascara/numeroMascara.html" class="submenu-link">Número Máscara</a></li>
-            <li><a href="../verifiedCalls/verifiedCalls.html" class="submenu-link">Verified Calls</a></li>
-            <li><a href="../smsProgramavel/smsProgramavel.html" class="submenu-link">SMS Programável</a></li>
+            <li><a href="../2fa/2fa.php" class="submenu-link">2FA</a></li>
+            <li><a href="../numeroMascara/numeroMascara.php" class="submenu-link">Número Máscara</a></li>
+            <li><a href="../verifiedCalls/verifiedCalls.php" class="submenu-link">Verified Calls</a></li>
+            <li><a href="../smsProgramavel/smsProgramavel.php" class="submenu-link">SMS Programável</a></li>
           </ul>
         </li>
         <li class="menu-link">
-          <a href="../mobilidade/mobilidade.html" class="menu-link">Mobilidade</a>
+          <a href="../mobilidade/mobilidade.php" class="menu-link">Mobilidade</a>
           <ul class="submenu">
             <li><a href="#" class="submenu-link">Celular Empresarial</a></li>
             <li><a href="#" class="submenu-link">MVNA/E</a></li>
           </ul>
         </li>
-        <li><a href="../eventos/eventos.html" class="menu-link">Eventos</a></li>
-        <li><a href="../contatos/contatos.html" class="menu-link">Contatos</a></li>
+        <li><a href="../eventos/eventos.php" class="menu-link">Eventos</a></li>
+        <li><a href="../contatos/contatos.php" class="menu-link">Contatos</a></li>
       </ul>
 
       <div class="hamburguer">
@@ -66,7 +66,7 @@
             <div class="ball"></div>
           </label>
         </div>
-        <button onclick="window.location.href='../login/login.html'"><svg xmlns="http://www.w3.org/2000/svg"
+        <button onclick="window.location.href='../login/login.php'"><svg xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
             <path
               d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
@@ -79,73 +79,24 @@
   <section class="containerHeader">
     <div class="containerHeader-content">
       <div class="containerHeader-title">
-        <h1>Contatos</h1>
+        <img src="../../assets/icons/cpaas-icon-dark.png" alt="eventos">
+        <h1>Número Máscara</h1>
       </div>
+      <p>Proteja identidades profissionais.</p>
+      <button onclick="contactRedirect()">Contrate Aqui</button>
     </div>
   </section>
 
-  <section class="contate">
-    <div class="contatLinks">
-      <div class="card-contate" id="card">
-        <h3>Ligue ou envie um WhatsApp para nós</h3>
-        <h2>(21) 3030-1010</h2>
+  <section class="containerSection">
+      <div class="container">
+        <h1 id="map-h1">CONHEÇA O NÚMERO MÁSCARA</h1>
+        <img src="../../assets/img/numeroMascara-page/numeroMascara1.jpg" alt="numeroMascara" id="panel">
+        <img src="../../assets/img/numeroMascara-page/numeroMascara2.jpg" alt="numeroMascara" id="panel">
+        <img src="../../assets/img/numeroMascara-page/numeroMascara3.jpg" alt="numeroMascara" id="panel">
+        <img src="../../assets/img/numeroMascara-page/numeroMascara4.jpg" alt="numeroMascara" id="panel">
+        <img src="../../assets/img/numeroMascara-page/numeroMascara5.jpg" alt="numeroMascara" id="panel">
+        <img src="../../assets/img/numeroMascara-page/numeroMascara6.jpg" alt="numeroMascara" id="panel">
       </div>
-      <div class="card-contate" id="card">
-        <a href="https://api.whatsapp.com/send?phone=552130301010&text=%23Comercial" target="_blank"><img src="../../assets/icons/whatsapp-icon.png" alt="wpp"> WhatsApp Comercial</a>
-        <a href="https://api.whatsapp.com/send?phone=552130301010&text=%23Suporte" target="_blank"><img src="../../assets/icons/whatsapp-icon.png" alt="wpp"> WhatsApp Suporte</a>
-        <a href="https://api.whatsapp.com/send?phone=552130301010&text=%23Financeiro" target="_blank"><img src="../../assets/icons/whatsapp-icon.png" alt="wpp"> WhatsApp Financeiro</a>
-      </div>
-      <div class="card-contate" id="card">
-        <h3>Envie um e-mail</h3>
-        <h2>suporte@telecall.com</h2>
-        <h3>Respondemos em até 24h</h3>
-      </div>
-      <div class="card-contate" id="card">
-        <h1>Escritórios</h1>
-        <h2>Brasil</h2>
-        Centro empresarial Mario Henrique Simonsen Av. das Américas, 3434 | Bloco 1, Sala 505 Barra da Tijuca | Rio de Janeiro, RJ
-        <h2>Estados Unidos</h2>
-        848 Brickell Av - Suite 1235 - Miami FL - 33131
-        <h2>Portugal</h2>
-        Avenida da Liberdade nº 245, 4º piso, sala 402 Lisboa, Portugal, 1250-143
-        <h2>Inglaterra</h2>
-        8 Devonshire Squae, Londom EC2M 4YJ
-      </div>
-    </div>
-
-    <div id="card-rigth"
-    class="card-contate">
-      <h1>NOS CONTATE</h1>
-      <form id="form">
-      <div class="textfield">
-        <label for="name">Nome</label>
-        <input type="text" placeholder="Nome" id="name" autocomplete="off">
-      </div>
-      <div class="textfield">
-        <label for="company">Empresa</label>
-        <input type="text" placeholder="Empresa" id="company" autocomplete="off">
-      </div>
-      <div class="textfield">
-        <label for="c-number">Numero de Celular</label>
-        <input type="tel" placeholder="(+55)xx-xxxxx-xxxx" maxlength="18" id="c-number" name="c-number" class="required" autocomplete="off" oninput="cNumberValidator()"/>
-      </div>
-      <div class="textfield">
-        <label for="email">Email</label>
-        <input type="text" placeholder="Email" id="email" autocomplete="off">
-      </div>
-      <div class="textfield">
-        <label for="subject">Assunto</label>
-        <input type="text" placeholder="Assunto" id="subject" autocomplete="off">
-      </div>
-      <div class="textfield">
-        <label for="message">Mensagem</label>
-        <textarea name="message" id="message" cols="50" rows="12" placeholder="Digite sua mensagem..."></textarea>
-      </div>
-      <div class="btn-contate-submit">
-        <input type="submit" class="btn-contate" value="enviar">
-      </div>
-      </form>
-    </div>
   </section>
 
   <button id="btnTop" onclick="upToTop()"></button>
@@ -153,7 +104,7 @@
   <footer>
     <div id="footer_content">
       <div id="footer_contacts">
-        <a href="../home/home.html">
+        <a href="../home/home.php">
           <img src="../../assets/img/telecall-logo6-light.png" alt="telecall-logo" id="logo-footer">
         </a>
         <p>O mais alto padrão de qualidade.</p>
@@ -174,11 +125,11 @@
         <li>
           <h2>PÁGINAS</h2>
           <ul>
-            <li><a href="../internet/internet.html" class="link">Internet</a></li>
-            <li><a href="../cpaas/cpaas.html" class="link">CpasS</a></li>
-            <li><a href="../mobilidade/mobilidade.html" class="link">Mobilidade</a></li>
-            <li><a href="../eventos/eventos.html" class="link">Eventos</a></li>
-            <li><a href="../contatos/contatos.html" class="link">Contatos</a></li>
+            <li><a href="../internet/internet.php" class="link">Internet</a></li>
+            <li><a href="../cpaas/cpaas.php" class="link">CpasS</a></li>
+            <li><a href="../mobilidade/mobilidade.php" class="link">Mobilidade</a></li>
+            <li><a href="../eventos/eventos.php" class="link">Eventos</a></li>
+            <li><a href="../contatos/contatos.php" class="link">Contatos</a></li>
           </ul>
         </li>
       </ul>
@@ -205,7 +156,7 @@
   </footer>
 </body>
 
-<script src="./contatos.js"></script>
+<script src="./numeroMascara.js"></script>
 <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

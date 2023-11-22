@@ -46,19 +46,19 @@ function switchLogo() {
 
 // redirecting
 function contactRedirect() {
-  window.location.href = '../contatos/contatos.html';
+  window.location.href = '../contatos/contatos.php';
 }
 
 function internetDedicadaRedirect() {
-  window.location.href = '../internetDedicada/internetDedicada.html';
+  window.location.href = '../internetDedicada/internetDedicada.php';
 }
 
 function wifiRedirect() {
-  window.location.href = '../wifiRedirect/wifiRedirect.html';
+  window.location.href = '../wifiRedirect/wifiRedirect.php';
 }
 
 function pabxRedirect() {
-  window.location.href = '../pabx/pabx.html';
+  window.location.href = '../pabx/pabx.php';
 }
 
 /*responsive button nav*/

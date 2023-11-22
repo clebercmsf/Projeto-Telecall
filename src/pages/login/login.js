@@ -24,7 +24,7 @@ function loginValidate() {
     activate(msgSuccess);
 
     setTimeout(function() {
-      window.location.href = '../home/home.html';
+      window.location.href = '../home/home.php';
     }, 2000);
   } else {
     activate(msgError);
