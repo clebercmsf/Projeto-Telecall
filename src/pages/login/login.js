@@ -1,8 +1,8 @@
 // login
 function getCookie(name) {
-  var cookies = document.cookie.split(';');
-  for (var i = 0; i < cookies.length; i++) {
-    var cookie = cookies[i].trim();
+  let cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    let cookie = cookies[i].trim();
     if (cookie.indexOf(name) === 0) {
       return cookie.substring(name.length + 1, cookie.length);
     }
@@ -12,23 +12,31 @@ function getCookie(name) {
 
 function loginValidate() {
   // jquery | ajax
-  var username = $('#username').val();
-  var password = $('#password').val();
+  let username = $('#username').val();
+  let password = $('#password').val();
 
   if (username != "" && password != "") {
     $.ajax({
       url: 'validator.php',
       method: 'POST',
       data: { username: username, password: password },
+      dataType: 'json',
       success: function (response) {
-        if (response === 'success') {
-          activate(msgSuccess);
-
-          setTimeout(function () {
-            window.location.href = '../home/home.php';
-          }, 2000);
-        } else {
+        if (response.status === 'failure') {
           activate(msgError);
+        } else {
+          let profile = response.profile;
+        
+          activate(msgSuccess);
+          if (profile === "1") {
+            setTimeout(function () {
+              window.location.href = '../crud/sistema.php';
+            }, 2000);
+          } else if (profile === "2") {
+            setTimeout(function () {
+              window.location.href = '../home/home.php';
+            }, 2000);
+          }
         }
       },
       error: function () {

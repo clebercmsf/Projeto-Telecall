@@ -1,24 +1,36 @@
 <?php
+session_start();
+
 try {
-    $connect = new PDO("mysql:host=localhost;dbname=db_telecall", "root", "");
+  $connect = new PDO("mysql:host=localhost;dbname=db_telecall", "root", "");
 
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+  $username = $_POST["username"];
+  $password = $_POST["password"];
 
-    $sql = "SELECT * FROM usuario WHERE Login_Usuario = :username AND Senha_Usuario = :pasword";
-    $stmt = $connect->prepare($sql);
-    $stmt->bindParam(':username', $username);
-    $stmt->bindParam(':pasword', $password);
-    $stmt->execute();
+  $sql = "SELECT * FROM usuario WHERE Login_Usuario = :username AND Senha_Usuario = :pasword";
+  $stmt = $connect->prepare($sql);
+  $stmt->bindParam(':username', $username);
+  $stmt->bindParam(':pasword', $password);
+  $stmt->execute();
 
-    $rowCount = $stmt->rowCount();
+  $rowCount = $stmt->rowCount();
 
-    if ($rowCount > 0) {
-        echo "success";
-    } else {
-        echo "failure";
-    }
+  if ($rowCount > 0) {
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    $profile = $row['Perfil_Usuario'];
+
+    $_SESSION['username'] = $row['Login_Usuario'];
+    $_SESSION['password'] = $row['Senha_Usuario'];
+    $_SESSION['profile'] = $profile;
+
+    echo json_encode(['status' => 'success', 'profile' => $profile]);
+  } else {
+    unset($_SESSION['username']);
+    unset($_SESSION['password']);
+    unset($_SESSION['profile']);
+    
+    echo json_encode(['status' => 'failure']);
+  }
 } catch (PDOException $e) {
-    echo "Erro na conexão com o banco de dados: " . $e->getMessage();
+  echo json_encode(['status' => 'error', 'message' => 'Erro na conexão com o banco de dados: ' . $e->getMessage()]);
 }
-?>
