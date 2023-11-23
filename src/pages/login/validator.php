@@ -16,6 +16,10 @@ try {
   $rowCount = $stmt->rowCount();
 
   if ($rowCount > 0) {
+    unset($_SESSION['username']);
+    unset($_SESSION['password']);
+    unset($_SESSION['profile']);
+    
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     $profile = $row['Perfil_Usuario'];
 
