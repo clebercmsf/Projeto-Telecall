@@ -41,6 +41,13 @@ function modelosRedirect() {
   window.location.href = '../modelos-er/modelos-er.php';
 }
 
+function logout() {
+  window.location.href = '../crud/sair.php';
+}
+
+function crud() {
+  window.location.href = '../crud/sistema.php';
+}
 
 // switchLogo
 var logoLightHeader = "../../assets/img/telecall-logo6-light.png";

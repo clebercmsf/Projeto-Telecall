@@ -28,16 +28,9 @@ function loginValidate() {
         } else if (response.status === 'success'){
           activate(msgSuccess);
           
-          let profile = response.profile;
-          if (profile == 1) {
-            setTimeout(function () {
-              window.location.href = '../crud/sistema.php';
-            }, 2000);
-          } else if (profile == 2) {
-            setTimeout(function () {
-              window.location.href = '../home/home.php';
-            }, 2000);
-          }
+          setTimeout(function () {
+            window.location.href = '../home/home.php';
+          }, 2000);
         }
       },
       error: function () {

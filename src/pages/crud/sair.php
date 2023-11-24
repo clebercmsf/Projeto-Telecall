@@ -3,5 +3,5 @@
   unset($_SESSION['username']);
   unset($_SESSION['password']);
   unset($_SESSION['profile']);
-  header('Location: ../login/login.php');
+  header('Location: ../home/home.php');
 ?>
