@@ -1,17 +1,1 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-</head>
-<body>
-    <h1>redirecionando...</h1>
-</body>
-
-<script>
-  window.location.href = "./src/pages/login/login.php";
-</script>
-
-</html>
+<?php header('Location: ./src/pages/home/home.php');?>
