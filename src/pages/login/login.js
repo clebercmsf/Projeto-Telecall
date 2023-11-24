@@ -29,11 +29,11 @@ function loginValidate() {
           activate(msgSuccess);
           
           let profile = response.profile;
-          if (profile === 1) {
+          if (profile == 1) {
             setTimeout(function () {
               window.location.href = '../crud/sistema.php';
             }, 2000);
-          } else if (profile === 2) {
+          } else if (profile == 2) {
             setTimeout(function () {
               window.location.href = '../home/home.php';
             }, 2000);
