@@ -38,11 +38,7 @@ function nameValidator() {
 }
 
 function birthValidator() {
-  let currentDate = new Date();
-  let inputDate = field[1].value;
-  let age = currentDate.getFullYear() - inputDate.getFullYear();
-
-  if (age < 18) {
+  if (field[1].value === "") {
     setError(1);
   } else {
     removeError(1);
@@ -156,11 +152,14 @@ tellInput.addEventListener("keypress", () => {
   }
 });
 
-// register
-function userRegister() {
+// update
+function userUpdate() {
   if (document.getElementById("name").value.length >= 15 && document.getElementById("name").value.length <= 60 && document.getElementById("username").value.length === 6 && document.getElementById("password").value.length >= 8) {
     // jquery | ajax
+    
+    var id = document.getElementById("idUsuario").value;
     var nome = $('#name').val();
+    var profile = $('input[name="profile"]:checked').val();
     var birth = $('#birth').val();
     var gender = $('input[name="gender"]:checked').val();
     var mName = $('#mName').val();
@@ -174,22 +173,31 @@ function userRegister() {
     $.ajax({
       url: 'send.php',
       method: 'POST',
-      data: { nome: nome, birth: birth, gender: gender, mName: mName, cpf: cpf, cNumber: cNumber, tNumber: tNumber, address: address, username: username, password: password },
-      success: function () {
-        activate(msgSuccess);
+      data: { id: id, nome: nome, profile: profile, birth: birth, gender: gender, mName: mName, cpf: cpf, cNumber: cNumber, tNumber: tNumber, address: address, username: username, password: password },
+      dataType: 'json',
+      success: function (response) {
+        if (response.status === 'failure') {
+          activate(msgError);
+        } else if (response.status === 'success') {
+          activate(msgSuccess);
+          setTimeout(function () {
+            window.location.href = '../sistema.php';
+          }, 2000);
+        }
+      },
+      error: function (error) {
+        console.log(error);
+        activate(msgError);
       }
     });
-
-    setTimeout(() => {
-      window.location.href = '../sistema.php';
-    }, 2000);
   }
 }
 
 // alert
 const divMessage = document.querySelector(".alert");
 
-const msgSuccess = "Cadastro efetuado com sucesso!";
+const msgSuccess = "Dados Atualizados com sucesso!";
+const msgError = "Os dados não computados!";
 
 function activate(msg) {
   const message = document.createElement("div");

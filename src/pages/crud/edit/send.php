@@ -1,29 +1,46 @@
 <?php
-if (!empty($_GET['id_Usuario'])) {
-  $connect = new PDO("mysql:host=localhost;dbname=db_telecall", "root", "");
+session_start();
 
-  // Evitar injeção SQL usando declaração preparada
-  $id = $_GET['id_Usuario'];
-  $sqlSelect = "SELECT * FROM usuario WHERE id_Usuario = :id";
-  $stmt = $connect->prepare($sqlSelect);
-  $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-  $stmt->execute();
+try {
+    $connect = new PDO("mysql:host=localhost;dbname=db_telecall", "root", "");
+    
+    $id = $_POST["id"];
+    $nome = $_POST["nome"];
+    $profile = $_POST["profile"];
+    $birth = $_POST["birth"];
+    $gender = $_POST["gender"];
+    $mName = $_POST["mName"];
+    $cpf = $_POST["cpf"];
+    $cNumber = $_POST["cNumber"];
+    $tNumber = $_POST["tNumber"];
+    $address = $_POST["address"];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-  if ($stmt->rowCount() > 0) {
-    $user_data = $stmt->fetch(PDO::FETCH_ASSOC);
+    if ($profile == "Master") {
+        $profile = 1;
+    } elseif ($profile == "Comum") {
+        $profile = 2;
+    }
 
-    $nome = $user_data["nome"];
-    $birth = $user_data["birth"];
-    $gender = $user_data["gender"];
-    $mName = $user_data["mName"];
-    $cpf = $user_data["cpf"];
-    $cNumber = $user_data["cNumber"];
-    $tNumber = $user_data["tNumber"];
-    $address = $user_data["address"];
-    $username = $user_data["username"];
-    $password = $user_data["password"];
-  } else {
-    header('Location: ../sistema.php');
-  }
+    $qry = $connect->prepare('UPDATE usuario SET Nome_Usuario = :nome, Nascimento_Usuario = :birth, Sexo_Usuario = :gender, Nome_Materno = :mName, CPF_Usuario = :cpf, Celular_Usuario = :cNumber, Telefone_Usuario = :tNumber, Endereco_Usuario = :adress, Login_Usuario = :username, Senha_Usuario = :pasword, Perfil_Usuario = :perfil WHERE id_Usuario = :id');
+    $qry->bindValue(':nome', $nome);
+    $qry->bindValue(':birth', $birth);
+    $qry->bindValue(':gender', $gender);
+    $qry->bindValue(':mName', $mName);
+    $qry->bindValue(':cpf', $cpf);
+    $qry->bindValue(':cNumber', $cNumber);
+    $qry->bindValue(':tNumber', $tNumber);
+    $qry->bindValue(':adress', $address);
+    $qry->bindValue(':username', $username);
+    $qry->bindValue(':pasword', $password);
+    $qry->bindValue(':perfil', $profile);
+    $qry->bindValue(':id', $id);
+
+    $qry->execute();
+    
+    echo json_encode(['status' => 'success']);
+} catch (PDOException $e) {
+    echo json_encode(['status' => 'failure', 'message' => 'Erro na conexão com o banco de dados: ' . $e->getMessage()]);
 }
 ?>

@@ -30,7 +30,6 @@ function loginValidate() {
           
           let profile = response.profile;
           if (profile === 1) {
-            console.log("foi")
             setTimeout(function () {
               window.location.href = '../crud/sistema.php';
             }, 2000);

@@ -12,6 +12,7 @@ if (!empty($_GET['id'])) {
     if ($stmt->rowCount() > 0) {
       $user_data = $stmt->fetch(PDO::FETCH_ASSOC);
 
+      $id = $user_data["id_Usuario"];
       $nome = $user_data["Nome_Usuario"];
       $birth = $user_data["Nascimento_Usuario"];
       $gender = $user_data["Sexo_Usuario"];
@@ -21,6 +22,7 @@ if (!empty($_GET['id'])) {
       $tNumber = $user_data["Telefone_Usuario"];
       $address = $user_data["Endereco_Usuario"];
       $username = $user_data["Login_Usuario"];
+      $password = $user_data["Senha_Usuario"];
       $profile = $user_data["Perfil_Usuario"];
       if ($profile == 1) {
         $profile = "Master";
@@ -122,12 +124,12 @@ if (!empty($_GET['id'])) {
         </div>
         <div class="textfield">
           <label for="password">Senha</label>
-          <input type="password" placeholder="Senha" class="required" oninput="passwordValidator()" autocomplete="off" />
+          <input type="text" placeholder="Senha" class="required" oninput="passwordValidator()" autocomplete="off" value="<?php echo $password ?>"/>
           <span class="span-required">A senha deve ter ao menos 8 caracteres alfabéticos.</span>
         </div>
         <div class="textfield">
           <label for="conf-password">Confirme a Senha</label>
-          <input type="password" placeholder="Confirme a Senha" class="required" id="password" name="password" oninput="passwordConfirm()" autocomplete="off" />
+          <input type="text" placeholder="Confirme a Senha" class="required" id="password" name="password" oninput="passwordConfirm()" autocomplete="off" value="<?php echo $password ?>"/>
           <span class="span-required">Senhas não conferem.</span>
         </div>
         <div class="login">
@@ -135,7 +137,7 @@ if (!empty($_GET['id'])) {
             <a href="../../login/login.php">Entre aqui.</a></label>
         </div>
         <div>
-          <input type="submit" class="btn-register" value="enviar" onclick="userRegister()">
+          <input type="submit" class="btn-register" value="enviar" onclick="userUpdate()">
         </div>
       </form>
     </section>
@@ -153,6 +155,7 @@ if (!empty($_GET['id'])) {
       </label>
     </div>
   </footer>
+  <input style="display: none;" type="text" id="idUsuario" value="<?php echo $id ?>"></input>
 </body>
 
 <script src="edit.js"></script>
