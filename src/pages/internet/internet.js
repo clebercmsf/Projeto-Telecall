@@ -20,8 +20,6 @@ const chk = document.getElementById("chk")
 chk.addEventListener("change", () => {
   document.body.classList.toggle("dark-mode");
   switchLogo();
-  // switchIcons();
-  // switchIcons2();
 })
 
 
@@ -47,6 +45,14 @@ function switchLogo() {
 // redirecting
 function contactRedirect() {
   window.location.href = '../contatos/contatos.php';
+}
+
+function logout() {
+  window.location.href = '../crud/sair.php';
+}
+
+function crud() {
+  window.location.href = '../crud/sistema.php';
 }
 
 /*responsive button nav*/

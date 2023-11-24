@@ -76,6 +76,14 @@ function wifiRedirect() {
   window.location.href = '../wifiRedirect/wifiRedirect.php';
 }
 
+function logout() {
+  window.location.href = '../crud/sair.php';
+}
+
+function crud() {
+  window.location.href = '../crud/sistema.php';
+}
+
 /*responsive button nav*/
 const hamburguer = document.querySelector('.hamburguer');
 const menu = document.querySelector('.menu');
