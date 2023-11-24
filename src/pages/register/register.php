@@ -31,7 +31,7 @@
         </div>
         <div class="textfield">
           <label for="birth">Data de Nascimento</label>
-          <input type="date" placeholder="Usuário" id="birth" name="birth" class="required" autocomplete="off" oninput="birthValidator()"/>
+          <input type="date" placeholder="Usuário" id="birth" name="birth" class="required" autocomplete="off" min="01-01-2005" required oninput="birthValidator()"/>
           <span class="span-required">Este campo deve ser preenchido.</span>
         </div>
         <div class="textfield">

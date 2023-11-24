@@ -14,6 +14,7 @@ function loginValidate() {
   // jquery | ajax
   let username = $('#username').val();
   let password = $('#password').val();
+  
 
   if (username != "" && password != "") {
     $.ajax({
@@ -24,15 +25,16 @@ function loginValidate() {
       success: function (response) {
         if (response.status === 'failure') {
           activate(msgError);
-        } else {
-          let profile = response.profile;
-        
+        } else if (response.status === 'success'){
           activate(msgSuccess);
-          if (profile === "1") {
+          
+          let profile = response.profile;
+          if (profile === 1) {
+            console.log("foi")
             setTimeout(function () {
               window.location.href = '../crud/sistema.php';
             }, 2000);
-          } else if (profile === "2") {
+          } else if (profile === 2) {
             setTimeout(function () {
               window.location.href = '../home/home.php';
             }, 2000);

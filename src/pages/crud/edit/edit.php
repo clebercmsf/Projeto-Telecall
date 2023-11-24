@@ -21,6 +21,12 @@ if (!empty($_GET['id'])) {
       $tNumber = $user_data["Telefone_Usuario"];
       $address = $user_data["Endereco_Usuario"];
       $username = $user_data["Login_Usuario"];
+      $profile = $user_data["Perfil_Usuario"];
+      if ($profile == 1) {
+        $profile = "Master";
+      } elseif ($profile == 2) {
+        $profile = "Comum";
+      }
     } else {
       header('Location: ../sistema.php');
       exit;
@@ -64,16 +70,24 @@ if (!empty($_GET['id'])) {
           <span class="span-required">O nome deve ter entre 15 e 60 caracteres alfabéticos.</span>
         </div>
         <div class="textfield">
+          <label for="profile">Perfil de Usuário</label>
+          <div class="gender">
+            <input type="radio" name="profile" id="master" value="Master" <?php echo $profile == "Master" ? 'checked' : '' ?> /><label for="master">Master</label>
+            <input type="radio" name="profile" id="common" value="Comum" <?php echo $profile == "Comum" ? 'checked' : '' ?> /><label for="common">Comum</label>
+          </div>
+        </div>
+        <br>
+        <div class="textfield">
           <label for="birth">Data de Nascimento</label>
           <input type="date" placeholder="Usuário" id="birth" name="birth" class="required" autocomplete="off" value="<?php echo $birth ?>" />
-          <span class="span-required">Este campo deve ser preenchido.</span>
+          <span class="span-required">Você deve ter ao menos 18 anos.</span>
         </div>
         <div class="textfield">
           <label for="gender">Sexo</label>
           <div class="gender">
-            <input type="radio" name="gender" id="sexm" value="Masculino" <?php $gender == "Masculino" ? 'checked' : '' ?> /><label for="sexm">Masculino</label>
-            <input type="radio" name="gender" id="sexf" value="Feminino" <?php $gender == "Feminino" ? 'checked' : '' ?> /><label for="sexf">Feminino</label>
-            <input type="radio" name="gender" id="other" value="Outro" <?php $gender == "Outro" ? 'checked' : '' ?> /><label for="other">Outro</label>
+            <input type="radio" name="gender" id="sexm" value="Masculino" <?php echo $gender == "Masculino" ? 'checked' : '' ?> /><label for="sexm">Masculino</label>
+            <input type="radio" name="gender" id="sexf" value="Feminino" <?php echo $gender == "Feminino" ? 'checked' : '' ?> /><label for="sexf">Feminino</label>
+            <input type="radio" name="gender" id="other" value="Outro" <?php echo $gender == "Outro" ? 'checked' : '' ?> /><label for="other">Outro</label>
           </div>
         </div>
         <div class="textfield">

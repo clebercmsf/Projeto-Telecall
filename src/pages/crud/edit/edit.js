@@ -38,7 +38,11 @@ function nameValidator() {
 }
 
 function birthValidator() {
-  if (field[1].value === "") {
+  let currentDate = new Date();
+  let inputDate = field[1].value;
+  let age = currentDate.getFullYear() - inputDate.getFullYear();
+
+  if (age < 18) {
     setError(1);
   } else {
     removeError(1);

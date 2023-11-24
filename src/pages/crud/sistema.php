@@ -106,7 +106,13 @@ $result = $conexao->query($sql);
           echo "<td>" . $user_data['Endereco_Usuario'] . "</td>";
           echo "<td>" . $user_data['Login_Usuario'] . "</td>";
           echo "<td>" . $user_data['Senha_Usuario'] . "</td>";
-          echo "<td>" . $user_data['Perfil_Usuario'] . "</td>";
+          $profile = $user_data['Perfil_Usuario'];
+          if ($profile == 1) {
+            $profile = "Master";
+          } elseif ($profile == 2) {
+            $profile = "Comum";
+          }
+          echo "<td>" . $profile . "</td>";
           echo "<td>
                         <a class='btn btn-sm btn-primary' href='./edit/edit.php?id=$user_data[id_Usuario]' title='Editar'>
                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>
