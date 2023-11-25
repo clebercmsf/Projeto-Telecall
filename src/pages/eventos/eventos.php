@@ -112,19 +112,19 @@ if (isset($_SESSION['username'])) {
         <img src="../../assets/icons/internetPage-icon1.png" alt="internet">
         <h2>Internet Dedicada</h2>
         <p>Acesso de internet dedicado com o máximo de qualidade, disponibilidade e segurança. Possui garantia de velocidade contratada e simetria de banda para Download e Upload. Inclui conexão Wi-Fi.</p>
-        <button><a href="https://telecall.com/internet-dedicada/" id="linkCardButton" target="_blank">Saiba Mais</a></button>
+        <button><a href="#" id="linkCardButton"">Saiba Mais</a></button>
       </div>
       <div class="card">
         <img src="../../assets/icons/internetPage-icon1.png" alt="hotspot">
         <h2>Hotspot</h2>
         <p>Hotspot Disponibilize acesso grátis à internet através de login social ou cadastro de e-mail e transforme o WiFi do seu evento em uma ferramenta de marketing e vendas.</p>
-        <button><a href="https://telecall.com/wi-fi-e-hotspot/" id="linkCardButton" target="_blank">Saiba Mais</a></button>
+        <button><a href="#" id="linkCardButton"">Saiba Mais</a></button>
       </div>
       <div class="card">
         <img src="../../assets/icons/eventosPage-icon1.png" alt="pabx">
         <h2>PABX IP Virtual Temporário</h2>
         <p>Todos os benefícios de uma solução de telefonia inteligente na nuvem para o seu evento. Contempla o fornecimento de aparelhos.</p>
-        <button><a href="https://telecall.com/pabx-ip-virtual/" id="linkCardButton" target="_blank">Saiba Mais</a></button>
+        <button><a href="#" id="linkCardButton"">Saiba Mais</a></button>
       </div>
     </div>
   </section>

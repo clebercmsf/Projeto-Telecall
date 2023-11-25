@@ -112,13 +112,13 @@ if (isset($_SESSION['username'])) {
         <img src="../../assets/icons/mobilityPage-icon.png" alt="celularEmpresarial">
         <h2>Celular Empresarial</h2>
         <p>Monte planos de celular personalizados para a sua empresa.</p>
-        <button><a href="https://telecall.com/celular-empresarial/" id="linkCardButton" target="_blank">Saiba Mais</a></button>
+        <button><a href="#" id="linkCardButton"">Saiba Mais</a></button>
       </div>
       <div class="card">
         <img src="../../assets/icons/mobilityPage-icon1.png" alt="mvna">
         <h2>MVNA/E</h2>
         <p>Sua empresa operando no mercado móvel com a melhor cobertura do Brasil.</p>
-        <button><a href="https://telecall.com/mvna-e-2/" id="linkCardButton" target="_blank">Saiba Mais</a></button>
+        <button><a href="#" id="linkCardButton"">Saiba Mais</a></button>
       </div>
     </div>
   </section>
