@@ -1,5 +1,5 @@
 <?php
-  $connect = new PDO("mysql:host=localhost;dbname=db_telecall", "root", "");
+  $connect = new PDO("mysql:host=localhost;dbname=id21570934_db_telecall", "id21570934_telecall", "Senha123!");
 
   $nome = $_POST["nome"];
   $birth = $_POST["birth"];

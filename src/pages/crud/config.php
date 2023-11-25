@@ -1,8 +1,8 @@
 <?php
   $dbHost = "localhost";
-  $dbUsername = "root";
-  $dbPassword = "";
-  $dbName = "db_telecall";
+  $dbUsername = "id21570934_telecall";
+  $dbPassword = "Senha123!";
+  $dbName = "id21570934_db_telecall";
     
   $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
 ?>

@@ -2,7 +2,7 @@
 session_start();
 
 try {
-  $connect = new PDO("mysql:host=localhost;dbname=db_telecall", "root", "");
+  $connect = new PDO("mysql:host=localhost;dbname=id21570934_db_telecall", "id21570934_telecall", "Senha123!");
 
   $username = $_POST["username"];
   $password = $_POST["password"];
