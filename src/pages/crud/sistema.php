@@ -27,7 +27,7 @@ $result = $conexao->query($sql);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="./style/sistema.css" />
+  <link rel="stylesheet" href="./sistema/style/sistema.css" />
   <title>CRUD - Telecall</title>
   <link rel="icon" href="../../assets/img/telecall-logo4-light.png" />
 </head>
@@ -40,17 +40,18 @@ $result = $conexao->query($sql);
           <img src="../../assets/img/telecall-logo6-light.png" alt="telecall-logo" id="logo-header">
         </a>
       </div>
-      <div>
+      <div class="buttons">
+        <button onClick="window.print()" onChange="hidden" style="width: 100px;">Salvar PDF</button>
         <button onclick='logout();'>Sair</button>
       </div>
     </nav>
   </header>
   <br>
   <?php
-  echo "<h1>BEM VINDO <u>$logado</u></h1>";
+  echo "<h1 class='noprint'>BEM VINDO <u>$logado</u></h1>";
   ?>
   <br>
-  <div>
+  <div class="noprint">
     <input type="search" class="textfield" placeholder="Pesquisar" id="search">
     <button onclick="searchData()" class="btn btnP">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
