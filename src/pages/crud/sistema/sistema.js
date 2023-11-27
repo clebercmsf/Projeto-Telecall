@@ -1,6 +1,15 @@
-// switchLogo
-var logoLightHeader = "../../assets/img/telecall-logo6-light.png";
-var logoDarkHeader = "../../assets/img/telecall-logo6-dark.png";
+let search = document.getElementById('search');
 
-var logoLightFooter = "../../assets/img/telecall-logo6-light.png";
-var logoDarkFooter = "../../assets/img/telecall-logo6-dark.png";
+  search.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      searchData();
+    }
+  });
+
+  function searchData() {
+    window.location = `sistema.php?search=${search.value}`;
+  }
+
+  function logout() {
+    window.location.href = '../crud/sair.php';
+  }
